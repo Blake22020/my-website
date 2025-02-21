@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 16px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    font-family: 'Roboto', sans-serif; /* Подключение шрифта Roboto */
+    background-color: #F5F5DC;
+}
+
+body > section, main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+main > section {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+section > header, section > footer, article {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif; /* Подключение шрифта Roboto */
+}
+
+h1 {
+    color: #F5F5DC;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Подключение шрифта Roboto */
+}
+
+section > header, section > footer {
+    background-color: #664433;
+    color: #F5F5DC;
+}
+
+.a {
+    background-color: #3d1c02;
+}
+
+.b {
+    background-color: #008b8b;
+}
+
+.c {
+    background-color: #228b22;
+}
+
+.d {
+    font-style: italic;
+    text-align: right;
+}
+
+.wow {
+    font-weight: bold;
+}

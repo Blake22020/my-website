@@ -1,0 +1,235 @@
+/* Общие стили для всей страницы */
+body {
+    text-align: center; /* Выравнивание текста по центру */
+    font-family: 'Arial Black', Gadget, sans-serif; /* Шрифт для текста */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    background: linear-gradient(180deg, rgba(68, 95, 87, 1) 0%, rgba(61, 202, 141, 1) 100%); /* Градиентный фон */
+    animation: fadeIn 1s ease-in-out; /* Анимация плавного появления страницы */
+}
+
+/* Анимация для плавного появления */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Начальная прозрачность */
+    to { opacity: 1; } /* Конечная прозрачность */
+}
+
+/* Шапка страницы */
+.container {
+    background-color: #3DCA8D; /* Цвет фона шапки */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругление углов */
+    animation: slideDown 1s ease-in-out; /* Анимация для шапки */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тень для шапки */
+}
+
+/* Анимация для шапки */
+@keyframes slideDown {
+    from { transform: translateY(-100%); } /* Начальное положение (выше экрана) */
+    to { transform: translateY(0); } /* Конечное положение (на экране) */
+}
+
+/* Заголовок в шапке */
+header h1 {
+    margin: 0; /* Убираем отступы */
+    font-size: 24px; /* Размер шрифта */
+    color: white; /* Цвет текста */
+}
+
+/* Основной контент */
+main {
+    width: 80%; /* Ширина основного контента */
+    max-width: 960px; /* Максимальная ширина */
+    margin: 20px auto; /* Центрирование и отступы */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #3DCA8D; /* Цвет фона */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+    animation: fadeInUp 1s ease-in-out; /* Анимация для основного контента */
+}
+
+/* Анимация для основного контента */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Начальная прозрачность */
+        transform: translateY(20px); /* Начальное положение (ниже экрана) */
+    }
+    to {
+        opacity: 1; /* Конечная прозрачность */
+        transform: translateY(0); /* Конечное положение (на экране) */
+    }
+}
+
+/* Заголовок в основном контенте */
+main h1 {
+    color: white; /* Цвет текста */
+}
+
+/* Статьи */
+article {
+    display: flex; /* Гибкий контейнер */
+    align-items: flex-start; /* Выравнивание элементов по верхнему краю */
+    gap: 20px; /* Расстояние между элементами */
+    margin-bottom: 20px; /* Отступ снизу */
+    padding: 20px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 8px; /* Скругление углов */
+    background-color: #f9f9f9; /* Цвет фона */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Анимация */
+    animation: fadeIn 1s ease-in-out; /* Анимация для статей */
+}
+
+/* Эффект при наведении на статью */
+article:hover {
+    transform: scale(1.05); /* Увеличение */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+/* Изображение в статье */
+.article-img {
+    width: 150px; /* Ширина изображения */
+    height: 150px; /* Высота изображения */
+    border-radius: 8px; /* Скругление углов */
+    object-fit: cover; /* Сохранение пропорций */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Анимация */
+}
+
+/* Эффект при наведении на изображение */
+.article-img:hover {
+    transform: scale(1.1); /* Увеличение */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+/* Контент статьи */
+.article-content {
+    flex: 1; /* Занимает оставшееся пространство */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Заголовок в статье */
+.article-content h2 {
+    margin: 0 0 10px 0; /* Отступы */
+    font-size: 20px; /* Размер шрифта */
+}
+
+/* Текст в статье */
+.article-content p {
+    margin: 0; /* Убираем отступы */
+    font-size: 16px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+}
+
+/* Кнопки в футере */
+.button-class {
+    background-color: white; /* Цвет фона */
+    border: none; /* Убираем границу */
+    color: black; /* Цвет текста */
+    padding: 10px 20px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block; /* Блочно-строчный элемент */
+    font-size: 16px; /* Размер шрифта */
+    margin: 4px 2px; /* Внешние отступы */
+    cursor: pointer; /* Курсор в виде указателя */
+    border-radius: 4px; /* Скругление углов */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Анимация */
+}
+
+/* Эффект при наведении на кнопку */
+.button-class:hover {
+    transform: scale(0.95); /* Уменьшение */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+/* Футер */
+footer {
+    background: linear-gradient(180deg, rgba(68, 95, 87, 1) 0%, rgba(61, 202, 141, 1) 100%); /* Градиентный фон */
+    border-radius: 50px; /* Скругление углов */
+    padding: 20px; /* Внутренние отступы */
+    margin-top: 20px; /* Отступ сверху */
+    animation: fadeInUp 1s ease-in-out; /* Анимация для футера */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Тень */
+    color: white; /* Цвет текста */
+}
+
+/* Боковые панели */
+.a {
+    background-color: #555; /* Цвет фона */
+    border: none; /* Убираем границу */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block; /* Блочно-строчный элемент */
+    font-size: 16px; /* Размер шрифта */
+    margin: 4px 2px; /* Внешние отступы */
+    cursor: pointer; /* Курсор в виде указателя */
+    border-radius: 4px; /* Скругление углов */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Анимация */
+}
+
+/* Эффект при наведении на боковые панели */
+.a:hover {
+    transform: translateY(-5px); /* Подъем */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    /* Увеличиваем ширину основного контента */
+    main {
+        width: 95%; /* Ширина основного контента на мобильных устройствах */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    /* Изменяем направление статей на вертикальное */
+    article {
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Центрируем элементы */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    /* Увеличиваем изображения на мобильных */
+    .article-img {
+        width: 100%; /* Изображения занимают 100% ширины контейнера */
+        height: auto; /* Высота автоматически подстраивается */
+        max-width: 300px; /* Ограничиваем максимальную ширину */
+    }
+
+    /* Уменьшаем размер шрифтов для заголовков и текста */
+    .article-content h2 {
+        font-size: 18px; /* Размер шрифта для заголовков */
+    }
+
+    .article-content p {
+        font-size: 14px; /* Размер шрифта для текста */
+    }
+
+    /* Уменьшаем отступы и размер кнопок */
+    .button-class {
+        padding: 8px 16px; /* Внутренние отступы для кнопок */
+        font-size: 14px; /* Размер шрифта для кнопок */
+    }
+
+    /* Уменьшаем отступы в футере */
+    footer {
+        padding: 10px; /* Внутренние отступы в футере */
+        border-radius: 20px; /* Уменьшаем скругление углов */
+    }
+
+    /* Скрываем боковые панели на мобильных */
+    .sidebar {
+        display: none; /* Скрываем боковые панели */
+    }
+
+    /* Уменьшаем размер заголовка в шапке */
+    header h1 {
+        font-size: 20px; /* Размер шрифта для заголовка */
+    }
+
+    /* Уменьшаем отступы в шапке */
+    .container {
+        padding: 10px; /* Внутренние отступы в шапке */
+    }
+}
