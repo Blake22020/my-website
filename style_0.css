@@ -9,7 +9,7 @@ body {
 
 /* Стили для абзацев */
 p {
-    font-family: 'Poppins', sans-serif; /* Шрифт для текста */
+    font-family: 'Poppins', sans-serif; /* Шрифт для текста */ 
     text-align: center; /* Выравнивание текста по центру */
 }
 
