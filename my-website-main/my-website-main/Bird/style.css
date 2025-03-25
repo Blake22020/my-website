@@ -82,7 +82,7 @@ article {
 
 /* Эффект при наведении на статью */
 article:hover {
-    transform: scale(1.05); /* Увеличение */
+    transform: scale(2.05); /* Увеличение */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень */
 }
 

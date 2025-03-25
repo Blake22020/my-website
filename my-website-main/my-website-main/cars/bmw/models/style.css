@@ -1,0 +1,142 @@
+/* Общие стили */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+
+body::selection {
+    background-color: #33C3FF;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #33C3FF, #6A11CB);
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 0 0 30px 30px;
+    transform: translateY(-100%);
+    animation: fadeInDown 1s ease-in-out forwards;
+}
+
+
+
+@keyframes fadeInDown{
+    from{
+        opacity: 0;
+    }
+    to{
+        opasity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1{
+    color: white;
+    text-align: center;
+}
+
+
+main {
+    width: 1350px;
+    margin: 80px auto;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #333;
+    transform: translateX(-100%);
+    animation: FadeInRight 1s ease-in-out forwards;
+}
+
+@keyframes FadeInRight{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main img{
+    border-radius: 50px;
+    margin: 0 auto;
+    transition: 0.5s ease-in-out;
+    width: 850px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main img:hover{
+    transform: scale(1.05);
+}
+
+.img-text{
+    display: flex;
+    background: white;
+    gap: 30px;
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 30px;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.img-text:hover{
+    transform: scale(1.05);
+}
+
+/* Стили для секции характеристик */
+.xarak {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.xarak h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.xarak h2 {
+    font-size: 28px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Стили для секции характеристик */
+.xarak {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.xarak h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.xarak h2 {
+    font-size: 28px;
+    color: #555;
+    margin-bottom: 40px;
+}
+

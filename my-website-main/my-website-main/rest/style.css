@@ -1,0 +1,159 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #007BFF;
+    border-radius: 0 0 20px 20px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.nav-buttons a {
+    margin-left: 20px;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-buttons a:hover {
+    color: #E0E0E0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home {
+    text-align: center;
+    padding: 50px;
+    max-width: 800px;
+}
+
+.description {
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.home h1 {
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.home h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.discount {
+    color: #007BFF;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.women {
+    width: 90%;
+    margin-top: 30px;
+}
+
+.women h1,
+.men h1 {
+    font-size: 75px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.order-button {
+    background-color: #007BFF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+}
+
+.discount-label {
+    color: red;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.men {
+    width: 90%;
+    margin-top: 30px;
+}

@@ -1,0 +1,62 @@
+/* Общие стили для body и шрифтов */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Стили для header */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Градиентный фон */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Стили для заголовка h1 */
+header h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff; /* Белый текст для контраста */
+    margin: 0;
+}
+
+/* Контейнер для кнопок */
+.head-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Стили для кнопок */
+.head-button {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff; /* Белый текст */
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
+    transition: all 0.3s ease;
+}
+
+/* Эффекты при наведении на кнопки */
+.head-button:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Более яркий фон при наведении */
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Активное состояние кнопок */
+.head-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

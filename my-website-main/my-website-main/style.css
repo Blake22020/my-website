@@ -1,0 +1,111 @@
+/* Общие стили */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F8F9FA;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #33C3FF, #6A11CB);
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 0 0 30px 30px;
+}
+
+header h1 {
+    text-align: center;
+    color: #F8F9FA;
+}
+
+/* Main */
+main {
+    width: 1200px;
+    margin: 80px auto;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #333;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 300px;
+    border-radius: 15px 15px 0 0;
+}
+
+.card h3 {
+    font-size: 30px;
+}
+
+.button-card {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #6A11CB, #33C3FF); /* Фиолетовый-голубой */
+    padding: 10px 70px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.button-card:hover {
+    transform: translateY(-5px) scale(1.1); /* Исправлено: объединено в одну строку */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Добавим тень для эффекта */
+}
+
+footer {
+    background: linear-gradient(135deg, #33C3FF, #6A11CB);
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
