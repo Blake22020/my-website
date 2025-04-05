@@ -8,7 +8,7 @@ body {
 
 /* Стили для header */
 header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Градиентный фон */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px 40px;
     display: flex;
@@ -16,7 +16,21 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
+    transform: translateY(-100%);
     z-index: 1000;
+    animation: fadeInDown 0.5s ease-in-out forwards;
+    border-radius: 0 0 20px 20px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Стили для заголовка h1 */
@@ -24,7 +38,7 @@ header h1 {
     font-family: 'Kanit', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #ffffff; /* Белый текст для контраста */
+    color: #ffffff;
     margin: 0;
 }
 
@@ -40,23 +54,92 @@ header h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: 500;
-    color: #ffffff; /* Белый текст */
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон */
+    background-color: rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
 
-/* Эффекты при наведении на кнопки */
 .head-button:hover {
-    background-color: rgba(255, 255, 255, 0.4); /* Более яркий фон при наведении */
+    background-color: rgba(255, 255, 255, 0.4);
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Активное состояние кнопок */
 .head-button:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main section {
+    margin: 50px auto;
+    width: 1200px;
+    background: white;
+    border-radius: 50px;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.sec-1-text {
+    font-size: 50px;
+}
+
+.section-1 img {
+    width: 450px;
+    border-radius: 30px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.section-1 img:hover {
+    transform: scale(1.1);
+}
+
+.section-1:hover{
+    transform: scale(1.1);
+}
+
+/* Улучшенная линия */
+.line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, transparent, #2575fc, transparent);
+    width: 4px;
+    height: 0;
+    animation: lineGrow 1s ease-in-out forwards;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(37, 117, 252, 0.5);
+    transition: all 0.5s ease;
+}
+
+/* Анимация роста линии */
+@keyframes lineGrow {
+    from {
+        height: 0;
+    }
+    to {
+        height: 500px;
+    }
+}
+
+
+.section-1 div p,.section-1 h3{
+    display: none;
+}
+
+
+
+.section-1:hover .line{
+    width: 0;
 }

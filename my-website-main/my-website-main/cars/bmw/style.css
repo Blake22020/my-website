@@ -1,479 +1,205 @@
-/* Общие стили */
+:root {
+  scroll-behavior: smooth !important;  
+}
+
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
-    font-family: 'Poppins', sans-serif;
+    background:  #D3D3D3;
     margin: 0;
-    padding: 0;
-    background: #f0f0f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    height: 100%;
+
 }
 
-body::selection {
-    background-color: #33C3FF;
-}
-
-/* Header */
 header {
-    background: linear-gradient(135deg, #33C3FF, #6A11CB);
-    margin-top: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 0 0 30px 30px;
-    transform: translateY(-100%);
-    animation: fadeInDown 1s ease-in-out forwards;
-}
-
-
-
-@keyframes fadeInDown{
-    from{
-        opacity: 0;
-    }
-    to{
-        opasity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Контейнер для кнопок */
-.head-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* Стили для кнопок */
-.head-button {
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-.head-button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.head-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+    margin: none;
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 header h1 {
+    margin-top: 0;
+    padding-top: 0;
     text-align: center;
-    color: #F8F9FA;
+}    
+
+.head-buttons {
+    display: flex;
+    justify-content: space-between;
 }
 
-/* Main */
-
-
-/* Анимация для движения значков */
-@keyframes moveIcons {
-    0% {
-        transform: translateX(100%); /* Начальная позиция (справа за пределами экрана) */
-    }
-    100% {
-        transform: translateX(-100%); /* Конечная позиция (влево за пределами экрана) */
-    }
-}
-main {
-    width: 1350px;
-    margin: 80px auto;
+.head-button {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 100%;
 }
 
 main h1 {
     text-align: center;
-    font-size: 60px;
-    color: #333;
-    transform: translateX(-100%);
-    animation: FadeInRight 1s ease-in-out forwards;
 }
 
-@keyframes FadeInRight{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-#history {
+#history, #inn, #aw {
     background: white;
-    border-radius: 35px;
-    padding: 20px;
-    font-size: 20px;
-    transform: translateX(-100%);
-    animation-delay: 0.5s;
-    transition: all 0.5s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: FadeInRight 1.5s ease-in-out forwards;
-}
+    width: 95%;
+    margin: 15px auto;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}   
 
-#history:hover {
-    transform: scale(1.01);
-}
-
-#history h2 {
-    font-size: 40px;
-    text-align: center;
-}
-
-#history img {
-    max-width: 100%;
-    border-radius: 15px;
-    width: 300px;
-    transition: all 0.5s ease-in-out; /* Плавный переход */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation-delay: 3s; /* Задержка анимации */
-}
-
-
-#history img:hover {
-    transform: scale(1.1) rotate(5deg); /* Анимация при наведении */
-}
-
-.history1, .history2 {
-    display: flex;
-    margin-bottom: 50px;
-    gap: 50px;
-    transition: all 0.5s ease-in-out;
-}
-
-.history1:hover, .history2:hover {
-    transform: translateY(-30px);
-}
-
-#inn {
-    background: white;
-    border-radius: 35px;
-    padding: 20px;
-    font-size: 20px;
-    transition: all 0.5s ease-in-out;
-    margin-top: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-}
-
-#inn:hover {
-    transform: scale(1.01);
-}
-
-#inn h2 {
-    font-size: 40px;
-    text-align: center;
-}
-
-#inn img {
-    max-width: 100%;
-    border-radius: 15px;
-    width: 300px;
-    transition: all 0.5s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-}
-
-#inn img:hover {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.inn1, .inn2 {
-    display: flex;
-    margin-bottom: 50px;
-    gap: 50px;
-    transition: all 0.5s ease-in-out;
-}
-
-.inn1:hover, .inn2:hover {
-    transform: translateY(-30px);
-}
-
-#aw {
-    background: white;
-    border-radius: 35px;
-    padding: 20px;
-    font-size: 20px;
-    transition: all 0.5s ease-in-out;
-    margin-top: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-}
-
-#aw:hover {
-    transform: scale(1.01);
-}
-
-#aw h2 {
-    font-size: 40px;
-    text-align: center;
-}
-
-#aw img {
-    max-width: 100%;
-    border-radius: 15px;
-    width: 300px;
-    transition: all 0.5s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-}
-
-#aw img:hover {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.aw1, .aw2 {
-    display: flex;
-    margin-bottom: 50px;
-    gap: 50px;
-    transition: all 0.5s ease-in-out;
-}
-
-.aw1:hover, .aw2:hover {
-    transform: translateY(-30px);
-}
+#history img, #inn img, #aw img{
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 30px;
+}   
 
 #models h2{
     text-align: center;
-    font-size: 50px;
-}
-#models{
-    font-size: 20px;
-    margin-top: 100px;
-    
-}
-
-.cards{
-    display: grid; /* Включаем Grid */
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки равной ширины */
-    grid-template-rows: auto;
 }
 
 .card{
-    width:350px;
-    height:400px;
-    text-align: center;
     background: white;
-    border-radius: 40px;
-    transition: all 0.5s ease-in-out;
-    padding: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 50px;
+    margin: 15px auto;
+    width: 95%;
+    padding: 10px;
+    box-sizing: border-box; 
+    border-radius: 25px;
+    text-align: center;
 }
 
-.card:hover{
-    transform: translateY(-40px);
-    transform: scale(1.05);
-}
 .card img{
-    width: 300px;
-    border-radius: 40px;
-    transition: all 0.5s ease-in-out;
+    width: 95%;
+    border-radius: 25px;
 }
 
-.card img:hover{
-    transform: scale(1.1);
-}
-.card h3{
-    font-size: 35px;
-}
 .card-buttons{
     display: flex;
-    gap:10px;
-    justify-content: center;
-}
-.card-button{
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 25-x;
-    font-weight: 500;
-    color: white;
-    padding: 10px 10px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #33C3FF, #6A11CB);
+    justify-content: space-around;
 }
 
-.card-button:hover{
-    transform: scale(1.1);
-    transform: translateY(-10px);
+.card h3{
+    font-size: 30px;
 }
+
+
+.card-button{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 100%;
+}
+
 footer {
-    background: linear-gradient(135deg, #33C3FF, #6A11CB);
-    margin-top: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 30px 30px 0 0;
-    text-align: center;
+    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+    margin: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    box-sizing: border-box;
 }
+
+footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}    
+
 
 footer a {
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-footer a:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-footer a:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 768px) {
-    /* Основные стили */
-    main {
-        width: 100%;
-        margin: 20px auto;
-        padding: 0 10px;
-    }
-
-    main h1 {
-        font-size: 40px;
-    }
-
-    /* Шапка */
-    header {
-        padding: 20px 10px;
-        width: 768px;
-    }
-
-    .head-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .head-button {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Секции */
-    #history, #inn, #aw {
-        padding: 15px;
-        margin-top: 50px;
-        width: 755px;
-    }
-
-    #history h2, #inn h2, #aw h2 {
-        font-size: 30px;
-    }
-
-    .history1, .history2, .inn1, .inn2, .aw1, .aw2 {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .history1 img, .history2 img, .inn1 img, .inn2 img, .aw1 img, .aw2 img {
-        width: 100%;
-    }
-
-    /* Карточки */
-    .cards {
-        grid-template-columns: 1fr; /* Одна колонка на мобильных */
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .card img {
-        width: 100%;
-    }
-
-    /* Футер */
-    footer {
-        padding: 20px 10px;
-        width:768px;
-    }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* Основные стили */
-    main {
-        width: 90%;
-        margin: 40px auto;
-    }
-
-    main h1 {
-        font-size: 50px;
-    }
-
-    /* Секции */
-    #history, #inn, #aw {
-        padding: 20px;
-        margin-top: 80px;
-    }
-
-    #history h2, #inn h2, #aw h2 {
-        font-size: 35px;
-    }
-
-    .history1, .history2, .inn1, .inn2, .aw1, .aw2 {
-        flex-direction: row;
-        gap: 30px;
-    }
-
-    .history1 img, .history2 img, .inn1 img, .inn2 img, .aw1 img, .aw2 img {
-        width: 50%;
-    }
-
-    /* Карточки */
-    .cards {
-        grid-template-columns: repeat(2, 1fr); /* Две колонки на планшетах */
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
-    }
-
-    .card img {
-        width: 100%;
-    }
-}
-.menu-toggle {
-    display: none; /* Скрываем кнопку на десктопах */
-    font-size: 24px;
-    background: none;
-    border: none;
     color: white;
-    cursor: pointer;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 25px; 
+    font-size: 100%;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Показываем кнопку на мобильных */
+
+@media (min-width: 1280px) {
+    .head-buttons{
+        display: flex;
+        justify-content: space-around;
+    }    
+    .head-button{
+        transition: all 0.3s ease-in-out;
+    }
+    .head-button:hover{
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.6);
+    }
+    #history, #inn, #aw {
+        background: white;
+        width: 65%;
+        margin: 40px auto;
+        border-radius: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+    }   
+    #history:hover, #inn:hover, #aw:hover {
+        transform: scale(1.05   );
+    } 
+    .history1, .history2, .inn1, .inn2, .aw1, .aw2{
+        display: flex;
+        gap: 40px;
+        transition: all 0.3s ease-in-out;
+        font-size: 20px;
+    }
+    .history1:hover, .history2:hover, .inn1:hover, .inn2:hover, .aw1:hover, .aw2:hover{
+        transform: translateY(-20px);
+    }
+    .history2, .inn2, .aw2{
+        display: flex;
+        flex-direction: row-reverse;
     }
 
-    .head-buttons {
-        display: none; /* Скрываем кнопки по умолчанию */
-        flex-direction: column;
-        gap: 10px;
+    #history img, #inn img, #aw img{
+        width: 25%;
+        margin: 10px auto;
+        border-radius: 30px;
+        transition: all 0.3s ease-in-out;
+    }   
+    #history img:hover, #inn img:hover, #aw img:hover{
+        transform: rotate(5deg) scale(0.95); /* Комбинируем трансформации */
+        transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Плавный эффект */
+    }   
+
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 колонки равной ширины */
+        justify-content: center;
     }
 
-    .head-buttons.active {
-        display: flex; /* Показываем кнопки при активации */
+    .card{
+        width: 75%;
+
+    }    
+
+    .card-button{
+        padding: 15px 25px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-button:hover{
+        transform: translateY(-5px) scale(1.1);
+
     }
 }
