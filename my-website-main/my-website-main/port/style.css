@@ -1,145 +1,246 @@
-/* Общие стили для body и шрифтов */
-body {
+html{
+    scroll-behavior: smooth;
+}
+
+body{
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #D3D3D3;
+
 }
 
-/* Стили для header */
-header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    transform: translateY(-100%);
-    z-index: 1000;
-    animation: fadeInDown 0.5s ease-in-out forwards;
-    border-radius: 0 0 20px 20px;
+
+
+ul{
+    list-style-type: none;
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Стили для заголовка h1 */
-header h1 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
+
+header{
+    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
     margin: 0;
+    padding: 10px;
+    border-radius: 0 0 25px 25px;
+    color: white
 }
 
-/* Контейнер для кнопок */
-.head-buttons {
+header h1{
+    text-align: center;
+}
+
+.head-buttons{
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
 }
 
-/* Стили для кнопок */
-.head-button {
+.head-button{
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    padding: 10px 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 15px;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
 }
 
-.head-button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
-.head-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
 
-main section {
-    margin: 50px auto;
-    width: 1200px;
+.section-1-1, .section-1-2, #section-2, #section-3{
+    padding: 20px;
+    box-sizing: border-box;
     background: white;
-    border-radius: 50px;
+    width: 95%;
+    margin: 15px auto;
+    border-radius: 25px;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+
 }
 
-.section-1 {
+.section-1-2 li{
+    font-size: large;
+}
+
+
+
+.cards{
     display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
 }
 
-.sec-1-text {
-    font-size: 50px;
+.card{
+    background:#fefefe;
+    width: 95%;
+    padding: 25px;
+    border-radius: 25px;
+    margin: auto;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+    
 }
 
-.section-1 img {
-    width: 450px;
-    border-radius: 30px;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
+.card img{
+    width: 95%;
+    border-radius: 25px;
 }
 
-.section-1 img:hover {
-    transform: scale(1.1);
+.card h2{
+    text-align: center;
+    font-size: xx-large;
 }
 
-.section-1:hover{
-    transform: scale(1.1);
+.card-button{
+    text-decoration: none;
+    color: white;
+    background: #2563eb;
+    padding: 15px 40%;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
-/* Улучшенная линия */
-.line {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(to bottom, transparent, #2575fc, transparent);
-    width: 4px;
-    height: 0;
-    animation: lineGrow 1s ease-in-out forwards;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(37, 117, 252, 0.5);
-    transition: all 0.5s ease;
+footer{
+    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+    margin: 0;
+    padding: 10px;
+    border-radius: 25px 25px 0 0;
+    color: white
 }
 
-/* Анимация роста линии */
-@keyframes lineGrow {
-    from {
-        height: 0;
+
+
+@media (min-width: 1280px) {
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        animation: fadeInDown 1s ease-in-out forwards;
+    }    
+    .head-buttons{
+        gap: 100px;
+        margin-right: 100px;
     }
-    to {
-        height: 500px;
+
+    .head-button{
+        transition: all 0.3s ease-in-out;
     }
-}
 
+    .head-button:hover{
+        transform: translateY(-10px) scale(1.1);
+        background: rgba(255, 255, 255, 0.6);
+    }   
+    #section-1{
+        display: flex;
+        width: 95%;
+        margin: auto;
+        gap: 25px;
+    }
 
-.section-1 div p,.section-1 h3{
-    display: none;
-}
+    .section-1-1, .section-1-2{
+        width: 75%;
+        padding: auto;
+    }
 
+    .section-1-1{
+        animation: fadeInRight 1s ease-in-out;
+    }
 
+    .section-1-2{
+        animation: fadeInLeft 1s ease-in-out;
+    }
 
-.section-1:hover .line{
-    width: 0;
+    .section-1-1 h1{
+        font-size: 100px;
+    }
+    .section-1-1 h2{
+        font-size: 85px;
+    }
+
+    .section-1-2 h2{
+        font-size: 40px;
+    }
+    .section-1-2 li{
+        font-size: 35px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+
+    }
+
+    #section-2{
+        animation: fadeInRight 1s ease-in-out;
+    }
+    .card-button{
+        margin: auto;
+        transition: all 0.3s ease-in-out;
+    }
+    .card-button:hover{
+        transform: translateY(-10px) scale(1.1);
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .card{
+        width: 350px;
+        margin: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover{
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img{
+        width: 95%;
+    }
+
+    footer{
+        animation: fadeInUp 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeInDown {
+        from{
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from{
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInRight {
+        from{
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes fadeInLeft {
+        from{
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 }
