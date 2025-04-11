@@ -12,12 +12,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #D3D3D3;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #1A1A1A; /* 🎨 изменено: тёмный фон */
+    font-family: 'Inter', sans-serif; /* ✍️ добавлено: основной шрифт */
+    color: #E0E0E0; /* ✍️ добавлено: базовый текст */
 }
 
 header {
-    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+    background: linear-gradient(90deg, #00AEEF, #00FF87); /* 🎨 изменено: новый градиент */
     color: white;
     padding: 10px;
     border-radius: 0 0 20px 20px;
@@ -29,8 +30,9 @@ header h1 {
     margin-top: 0;
     padding-top: 0;
     text-align: center;
+    font-family: 'Orbitron', sans-serif; /* ✍️ добавлено: tech-шрифт для заголовков */
 }
-    
+
 main {
     flex: 1;
     padding: 20px 0;
@@ -43,7 +45,8 @@ main {
 }
 
 .card {
-    background: white;
+    background: #2C2C2C; /* 🎨 изменено: карточка тёмная */
+    color: white; /* ✍️ добавлено: белый текст */
     width: 90%;
     max-width: 400px;
     text-align: center;
@@ -52,8 +55,9 @@ main {
     margin: 20px auto;
     box-sizing: border-box;
     padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* 🎨 изменено: глубже тень */
     transition: transform 0.2s ease;
+    font-family: 'Inter', sans-serif;
 }
 
 .card img {
@@ -66,21 +70,23 @@ main {
 .card-button {
     text-decoration: none;
     color: white;
-    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+    background: linear-gradient(90deg, #00AEEF, #00FF87); /* 🎨 изменено: градиент кнопки */
     padding: 10px 15px;
     border-radius: 25px;
     font-size: 100%;
     margin-bottom: 30px;
     display: inline-block;
     width: 50%;
+    font-family: 'Orbitron', sans-serif; /* ✍️ tech-шрифт для кнопки */
 }
 
 h1, h2 {
     text-align: center;
+    font-family: 'Orbitron', sans-serif; /* ✍️ заголовки — tech стиль */
 }
 
 footer {
-    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+    background: linear-gradient(90deg, #00AEEF, #00FF87); /* 🎨 изменено: футер в стиле */
     color: white;
     padding: 25px;
     border-radius: 20px 20px 0 0;
@@ -93,7 +99,7 @@ footer {
 footer a {
     text-decoration: none;
     color: white;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2); /* 🎨 изменено: деликатная прозрачность */
     padding: 10px;
     border-radius: 25px;
     font-size: 100%;
@@ -106,7 +112,7 @@ footer a {
         justify-content: center;
         gap: 30px;
     }
-    
+
     .card {
         width: 300px;
         height: 450px;
@@ -114,26 +120,26 @@ footer a {
         animation: fadeInUp 0.5s ease-in-out forwards;
     }
 
-    header{
+    header {
         opacity: 0;
         transform: translateY(-100%);
         animation: fadeInDown 0.5s ease-in-out forwards;
     }
 
-    footer{
+    footer {
         opacity: 0;
         transform: translateY(100%);
         animation: fadeInUp 0.5s ease-in-out forwards;
     }
 
-    .card-button{
-        transition: all 0.3s ease-in-out ;
+    .card-button {
+        transition: all 0.3s ease-in-out;
     }
 
     .card-button:hover {
         transform: scale(1.1);
     }
-    
+
     @keyframes fadeInUp {
         from {
             transform: translateY(50%);
@@ -146,11 +152,11 @@ footer a {
     }
 
     @keyframes fadeInDown {
-        from{
+        from {
             opacity: 0;
             transform: translateY(-100%);
         }
-        to{
+        to {
             opacity: 1;
             transform: translateY(0);
         }

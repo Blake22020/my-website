@@ -6,6 +6,7 @@
     <title>BMW</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
     <main>
         <h1>BMW</h1>
 
-        <section id="history">
+        <section id="history" data-aos="zoom-in">
             <h2>История</h2>
             <div class="history1">
                 <p>BMW (Bayerische Motoren Werke AG) была основана в 1916 году в Мюнхене как производитель авиационных двигателей. После Первой мировой войны компания переключилась на мотоциклы, а затем и на автомобили. Первый успех пришёл с мотоциклом R32 в 1923 году, а в 1936 году BMW представила легендарный спортивный автомобиль 328, который прославил марку на гоночных трассах.</p>
@@ -33,7 +34,7 @@
         </section>
 
 
-        <section id="inn">
+        <section id="inn" data-aos="zoom-in">
             <h2>Инновации BMW в автомобилестроении</h2>
             <div class="inn1">
                 <p>BMW всегда славилась своими инновациями в автомобилестроении. Одним из ключевых достижений компании стало внедрение технологии Efficient Dynamics, которая сочетает в себе высокую производительность и экологичность. Эта система включает в себя рекуперативное торможение, систему старт-стоп и оптимизацию аэродинамики, что позволяет снизить расход топлива и выбросы CO2. BMW также активно развивает электрические и гибридные технологии, как видно на примере моделей i3 и i8, которые стали символами современного подхода к мобильности.</p>
@@ -46,7 +47,7 @@
         </section>
 
 
-        <section id="aw">
+        <section id="aw" data-aos="zoom-in">
             <h2>BMW в автоспорте</h2>
             <div class="aw1">
                 <p>BMW имеет богатую историю в автоспорте, начиная с 1930-х годов. Одним из самых знаковых достижений компании стало участие в гонках Formula 1 в 1980-х годах, где двигатели BMW использовались командой Brabham. Эти двигатели, известные своей мощностью и надёжностью, помогли команде выиграть несколько гонок и установить рекорды. BMW также активно участвовала в гонках на выносливость, таких как 24 часа Ле-Мана, где её автомобили неоднократно занимали призовые места.</p>
@@ -62,19 +63,19 @@
         <section id="models">
             <h2>Модели BMW</h2>
             <div class="cards">
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <img src="https://file.autodoc.ru/news/avto-novosti/446940836_5.jpg" id="m5" alt="M5 CS">
                     <h3 id="card-m5-bmw">M5</h3>
                     <div class="card-buttons">
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-m5-bmw')" onmouseleave="resetText('card-m5-bmw', 'M5')">Clasic</a>
-                        <a href="models/m5cs.html" class="card-button" onmouseenter="cardbuttons(this, 'card-m5-bmw')" onmouseleave="resetText('card-m5-bmw', 'M5')">CS</a>
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-m5-bmw')" onmouseleave="resetText('card-m5-bmw', 'M5')">Competition</a>
+                        <a href="models/m5_/index.html" class="card-button" onmouseenter="cardbuttons(this, 'card-m5-bmw')" onmouseleave="resetText('card-m5-bmw', 'M5')">Clasic</a>
+                        <a href="models/m5_cs/m5cs.html" class="card-button" onmouseenter="cardbuttons(this, 'card-m5-bmw')" onmouseleave="resetText('card-m5-bmw', 'M5')">CS</a>
+                        <a href="models/m5_comp/index.html" class="card-button" onmouseenter="cardbuttons(this, 'card-m5-bmw')" onmouseleave="resetText('card-m5-bmw', 'M5')">Competition</a>
                     </div>
                 </div>
 
 
 
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <img src="https://mediapool.bmwgroup.com/cache/P9/202404/P90548561/P90548561-the-all-new-bmw-m4-cs-05-2024-2250px.jpg" alt="M4 CS">
                     <h3 id="card-m4-cs">M4</h3>
                     <div class="card-buttons">
@@ -86,7 +87,7 @@
                 </div>
 
 
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <img src="https://autopatterns.ru/files/name_bmw_3_series_2023_m3_cs_limousine_id_2509_rand_561890_num_1-jpg.jpg" alt="M3">
                     <h3 id="card-m3-cs">M3</h3>
                     <div class="card-buttons">
@@ -99,7 +100,7 @@
                 
 
 
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <img src="https://www.t-r-n.ru/files/modification-images/15/71/d5/85/48048_tmb940.jpg" alt="M5 CS">
                     <h3 id="card-m8-bmw">M8</h3>
                     <div class="card-buttons">
@@ -110,7 +111,7 @@
                 </div>
 
 
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6557e56a10424c21a5093f87_6557e57aae02471a4784a246/scale_1200" alt="M2 CS">
                     <h3 id="card-m2-cs">M2</h3>
                     <div class="card-buttons">
@@ -121,7 +122,7 @@
                 </div>
 
 
-                <div class="card">
+                <div class="card" data-aos="flip-left">
                     <img src="https://mediapool.bmwgroup.com/cache/P9/201404/P90148136/P90148136-bmw-i8-04-2014-2253px.jpg" alt="i8">
                     <h3 id="card-i8-cs">i8</h3>
                     <div class="card-buttons">
@@ -131,39 +132,6 @@
                 </div>
 
 
-
-
-
-                <div class="card">
-                    <img src="https://i1.wp.com/www.carpixel.net/w/e8aa4f4f794b69cc74b0a8911731f00e/bmw-i4-m50-car-wallpaper-104588.jpg" alt="i4">
-                    <h3 id="card-i4-bmw">i4</h3>
-                    <div class="card-buttons">
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-i4-bmw')" onmouseleave="resetText('card-i4-bmw', 'i4')">Clasic</a>
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-i4-bmw')" onmouseleave="resetText('card-i4-bmw', 'i4')">M50</a>
-                    </div>
-                </div>
-
-
-
-                <div class="card">
-                    <img src="https://avatars.mds.yandex.net/i?id=a32f9ebac1d44db6bd40d3138cfe593593cd2913d12e06c1-12752860-images-thumbs&n=13" alt="i7 CS">
-                    <h3 id="card-i7-cs">i7</h3>
-                    <div class="card-buttons">
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-i7-cs')" onmouseleave="resetText('card-i7-cs', 'i7')">Clasic</a>
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-i7-cs')" onmouseleave="resetText('card-i7-cs', 'i7')">M70</a>
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <img src="https://a.d-cd.net/8ff3e11s-960.jpg" alt="M6">
-                    <h3 id="card-m6-cs">M6</h3>
-                    <div class="card-buttons">
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-m6-cs')" onmouseleave="resetText('card-m6-cs', 'M6')">Clasic</a>
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-m6-cs')" onmouseleave="resetText('card-m6-cs', 'M6')">Competition</a>
-                        <a href="#" class="card-button" onmouseenter="cardbuttons(this, 'card-m6-cs')" onmouseleave="resetText('card-m6-cs', 'M6')">GTE</a>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
@@ -171,5 +139,9 @@
         <a href="work/index.html">Перейти на портфолио создателя</a>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 </html>
