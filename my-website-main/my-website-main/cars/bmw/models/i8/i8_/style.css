@@ -131,6 +131,7 @@ footer a {
     padding: 10px;
     border-radius: 25px; 
     font-size: 100%;
+    cursor: pointer;
 }
 
 @media (min-width: 1280px) {
@@ -145,6 +146,14 @@ footer a {
     .head-buttons {
         justify-content: center;
         gap: 100px;
+    }
+    .head-button{
+        transition: all 0.3s ease-in-out;
+    }
+
+    .head-button:hover{
+        background: rgba(255, 255, 255, 0.6);
+        transform: translateY(-10px) scale(1.1);
     }
 
     #h1 {   
@@ -164,6 +173,7 @@ footer a {
         height: auto;
         object-fit: contain;
         margin: 0;
+        transition: all 0.3s ease-in-out;
     }
     
     #section-1 h2 {

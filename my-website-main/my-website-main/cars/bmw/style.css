@@ -1,8 +1,8 @@
 :root {
-  scroll-behavior: smooth !important;  
-}
-
-
+    scroll-behavior: smooth !important;  
+  }
+  
+  
 html {
     scroll-behavior: smooth;
 }
@@ -13,6 +13,10 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     height: 100%;
 
+}
+
+body::selection{
+    background-color: #02cf4a;
 }
 
 header {
@@ -130,6 +134,7 @@ footer a {
     padding: 10px;
     border-radius: 25px; 
     font-size: 100%;
+    cursor: pointer;
 }
 
 
@@ -166,6 +171,12 @@ footer a {
     .history1:hover, .history2:hover, .inn1:hover, .inn2:hover, .aw1:hover, .aw2:hover{
         transform: translateY(-20px);
     }
+
+    .history1:hover img, .history2:hover img, .inn1:hover img, .inn2:hover img, .aw1:hover img, .aw2:hover img{
+        transform: rotate(5deg) scale(0.95); 
+        transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
     .history2, .inn2, .aw2{
         display: flex;
         flex-direction: row-reverse;
@@ -178,21 +189,28 @@ footer a {
         transition: all 0.3s ease-in-out;
     }   
     #history img:hover, #inn img:hover, #aw img:hover{
-        transform: rotate(5deg) scale(0.95); /* Комбинируем трансформации */
-        transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Плавный эффект */
+        transform: rotate(5deg) scale(1.0) rotate(-5deg); 
     }   
 
     .cards{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* 3 колонки равной ширины */
+        grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
     }
 
     .card{
         width: 75%;
-
     }    
 
+    .card img{
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .card img:hover{
+    transform: scale(1.05) translateY(10px);
+    
+    }
+    
     .card-button{
         padding: 15px 25px;
         transition: all 0.3s ease-in-out;
