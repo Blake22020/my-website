@@ -36,7 +36,7 @@ h1 {
 	font-size: 8rem;
 	margin: 0;
 	color: #ff5555;
-	text-shadow: 0 0 10px rgba(255, 85, 85, 0.5);
+	text-shadow: 0 0 100px rgba(255, 85, 85, 0.5);
 }
 
 h2 {
@@ -57,10 +57,12 @@ p {
 	object-fit: cover;
 	box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 	transition: all 0.3s ease-in-out;
+	animation: left 1.5s ease-out forwards;
 }
 
 img:hover {
-	transform: scale(1.1);
+	box-shadow: 0 0 100px 10px #ff3333;
+	border-radius: 50px;
 }
 
 .home-button {
@@ -74,11 +76,49 @@ img:hover {
 	transition: all 0.3s ease;
 	text-decoration: none;
 	display: inline-block;
+	box-shadow: 0 0 40px 5px #ff3333;
 }
 
 .home-button:hover {
 	background-color: #ff3333;
-	transform: scale(1.05);
+	box-shadow: 0 0 50px 5px #ff3333;
+}
+
+@keyframes left {
+	from {
+		transform: translateX(100vh);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+h1,
+h2,
+p {
+	animation: right 1.5s ease-out forwards;
+}
+
+@keyframes right {
+	from {
+		transform: translateX(-100vh);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.home-button {
+	animation: up 1.5s ease-out forwards;
+}
+
+@keyframes up {
+	from {
+		transform: translateY(100vh);
+	}
+	to {
+		transform: translateY(0);
+	}
 }
 
 @media (max-width: 768px) {
@@ -94,7 +134,6 @@ img:hover {
 		transition: none;
 	}
 	.emoji-img {
-		width: 200px;
-		height: 200px;
+		width: 95%;
 	}
 }
