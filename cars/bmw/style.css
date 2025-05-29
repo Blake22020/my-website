@@ -1,0 +1,252 @@
+:root {
+    scroll-behavior: smooth !important;  
+  }
+  
+  
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #18aaaa;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+body {
+    background:  #D3D3D3;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    height: 100vh;
+
+}
+
+body::selection{
+    background-color: #02cf4a;
+}
+
+header {
+    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+    margin: none;
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+}    
+
+.head-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.head-button {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 100%;
+    text-align: center;
+}
+
+main h1 {
+    text-align: center;
+}
+
+#history, #inn, #aw {
+    background: white;
+    width: 95%;
+    margin: 15px auto;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}   
+
+#history img, #inn img, #aw img{
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 30px;
+}   
+
+#models h2{
+    text-align: center;
+}
+
+.card{
+    background: white;
+    margin: 15px auto;
+    width: 95%;
+    padding: 10px;
+    box-sizing: border-box; 
+    border-radius: 25px;
+    text-align: center;
+}
+
+.card img{
+    width: 95%;
+    border-radius: 25px;
+}
+
+.card-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card h3{
+    font-size: 30px;
+}
+
+
+.card-button{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 100%;
+}
+
+footer {
+    background: linear-gradient(90deg, #0dc9bd, #02cf4a);
+    margin: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}    
+
+
+footer a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 25px; 
+    font-size: 100%;
+    cursor: pointer;
+}
+
+
+@media (min-width: 1280px) {
+    .head-buttons{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }    
+    .head-button{
+        transition: all 0.3s ease-in-out;
+    }
+    .head-button:hover{
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.6);
+    }
+    #history, #inn, #aw {
+        background: white;
+        width: 65%;
+        margin: 40px auto;
+        border-radius: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+    }   
+    #history:hover, #inn:hover, #aw:hover {
+        transform: scale(1.05   );
+    } 
+    .history1, .history2, .inn1, .inn2, .aw1, .aw2{
+        display: flex;
+        gap: 40px;
+        transition: all 0.3s ease-in-out;
+        font-size: 20px;
+    }
+    .history1:hover, .history2:hover, .inn1:hover, .inn2:hover, .aw1:hover, .aw2:hover{
+        transform: translateY(-20px);
+    }
+
+    .history1:hover img, .history2:hover img, .inn1:hover img, .inn2:hover img, .aw1:hover img, .aw2:hover img{
+        transform: rotate(5deg) scale(0.95); 
+        transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .history2, .inn2, .aw2{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #history img, #inn img, #aw img{
+        width: 25%;
+        margin: 10px auto;
+        border-radius: 30px;
+        transition: all 0.3s ease-in-out;
+    }   
+    #history img:hover, #inn img:hover, #aw img:hover{
+        transform: scale(1.0) rotate(0deg); 
+    }   
+
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+    }
+
+    .card{
+        width: 75%;
+    }    
+
+    .card img{
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .card img:hover{
+    transform: scale(1.05) translateY(10px);
+    
+    }
+    
+    .card-button{
+        padding: 15px 25px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-button:hover{
+        transform: translateY(-5px) scale(1.1);
+
+    }
+
+    footer a{
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer a:hover{
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.6);
+    }
+}
