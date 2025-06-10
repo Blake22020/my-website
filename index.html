@@ -1,46 +1,109 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gblake — Машины</title>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GBlake</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<p>GBlake</p>
+			<div class="head-buttons">
+				<a href="#info" class="head-button">Инфо</a>
+				<a href="#cars" class="head-button">Марки</a>
+				<a href="#footer" class="head-button">Контакты</a>
+			</div>
+		</header>
+		<main>
+			<div class="section-1">
+				<div class="main-text">
+					<div class="text">
+						<h1>Автомобили</h1>
+						<p>
+							Большая энциклопедия про самый <br />
+							известный вид транспорта
+						</p>
+					</div>
+					<a href="#cars " class="button">Перейти</a>
+				</div>
+				<img src="assets/img/section-1.jpeg" alt="GBlake" />
+			</div>
+			<div class="section-2" id="info">
+				<img src="assets/img/section-2.png" alt="" />
+				<div class="blocks">
+					<div class="block">
+						<p>
+							Узнайте историю появления первых автомобилей и этапы развития
+							автомобильной промышленности.
+						</p>
+					</div>
+					<div class="block">
+						<p>
+							Откройте для себя разнообразие типов двигателей и особенностей
+							конструкции современных машин.
+						</p>
+					</div>
+					<div class="block">
+						<p>
+							Погрузитесь в мир инноваций и узнайте о последних достижениях в
+							области автомобилестроения.
+						</p>
+					</div>
+					<div class="block">
+						<p>
+							Обнаружьте секреты безопасности и технологии, обеспечивающие
+							комфорт современного вождения.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="section-3" id="cars">
+				<h1>Марки автомобилей</h1>
+				<div class="cards">
+					<div class="card">
+						<img src="assets/img/bmw.jpeg" alt="" />
+						<h1>BMW</h1>
+						<a href="404/index.html" class="button">Перейти</a>
+					</div>
 
-    <!-- Шрифты -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+					<div class="card">
+						<img src="assets/img/mers.jpeg" alt="" />
+						<h1>Mercedes</h1>
+						<a href="404/index.html" class="button">Перейти</a>
+					</div>
 
-    <!-- Стили -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Gblake</h1>
-    </header>
+					<div class="card">
+						<img src="assets/img/porshe.jpeg" alt="" />
+						<h1>Porshe</h1>
+						<a href="404/index.html" class="button">Перейти</a>
+					</div>
 
-    <main>
-        <h1>Выбери интересующую марку машины</h1>
-        <div class="cards">
-            <div class="card">
-                <img src="https://www.pereoformi.ru/upload/iblock/91f/93yg55wwis0aleg7tzmyywuy5g25faub.png" alt="BMW">
-                <h3>BMW</h3>
-                <a href="cars/bmw/index.html" class="card-button">Перейти</a>
-            </div>
-
-            <div class="card">
-                <img src="https://main-cdn.sbermegamarket.ru/big1/hlr-system/-15/902/575/815/191/527/100053570831b0.png" alt="Mercedes">
-                <h3>Mercedes</h3>
-                <a href="cars/mercedes/index.html" class="card-button">Перейти</a>
-            </div>
-            <div class="card">
-                <img src="https://otto-models.com/img/m/14.jpg" alt="Porshe">
-                <h3>Porsche</h3>
-                <a href="work/index.html" class="card-button">Перейти</a>
-            </div>
-        </div>
-        <h2>Скоро здесь появится ещё больше машин! <br>Мы над этим работаем!</h2>
-    </main>
-
-    <footer>
-        <a href="port/index.html">Перейти на портфолио создателя</a>
-    </footer>
-</body>
+					<div class="card">
+						<img src="assets/img/volga.jpeg" alt="" />
+						<h1>Волга</h1>
+						<a href="404/index.html" class="button">Перейти</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer id="footer">
+			<h1>Контакты</h1>
+			<div class="buttons">
+				<a href="#" class="button"
+					>Telegram<img src="assets/img/icons/telegram.png" alt=""
+				/></a>
+				<a href="#" class="button"
+					>Github<img src="assets/img/icons/github.png" alt=""
+				/></a>
+			</div>
+			<p>GBlake 2025</p>
+		</footer>
+	</body>
 </html>
