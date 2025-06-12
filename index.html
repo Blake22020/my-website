@@ -15,6 +15,11 @@
 	<body>
 		<header>
 			<p>GBlake</p>
+			<div id="burger" class="burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 			<div class="head-buttons">
 				<a href="#info" class="head-button">Инфо</a>
 				<a href="#cars" class="head-button">Марки</a>
@@ -31,7 +36,7 @@
 							известный вид транспорта
 						</p>
 					</div>
-					<a href="#cars " class="button">Перейти</a>
+					<a href="#cars" class="button">Перейти</a>
 				</div>
 				<img src="assets/img/section-1.jpeg" alt="GBlake" />
 			</div>
@@ -99,11 +104,27 @@
 				<a href="#" class="button"
 					>Telegram<img src="assets/img/icons/telegram.png" alt=""
 				/></a>
-				<a href="#" class="button"
+				<a href="https://github.com/Blake22020" class="button"
 					>Github<img src="assets/img/icons/github.png" alt=""
 				/></a>
 			</div>
 			<p>GBlake 2025</p>
 		</footer>
+
+		<div id="Modal" class="modal">
+			<div class="modal-content">
+				<h1>Подтверждение согласия</h1>
+				<p>
+					Продолжая использование нашего сервиса, вы подтверждаете своё согласие
+					с нашей Политикой конфиденциальности и Условиями предоставления услуг.
+				</p>
+				<p>
+					Нажимая кнопку «Принять», вы соглашаетесь с обработкой ваших
+					персональных данных.
+				</p>
+				<button onclick="acceptAction()">Принять</button>
+			</div>
+		</div>
+		<script src="script.js"></script>
 	</body>
 </html>
