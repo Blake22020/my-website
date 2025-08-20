@@ -1,40 +1,52 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const burger = document.getElementById('burger')
-	const menu = document.querySelector('.head-buttons')
+    const burger = document.getElementById('burger');
+    const menu = document.querySelector('.head-buttons');
+    const modal = document.getElementById('Modal');
+    const body = document.body;
 
-	burger.addEventListener('click', function () {
-		this.classList.toggle('active')
-		menu.classList.toggle('active')
+    // Проверяем, был ли пользователь уже на сайте и согласие получено
+    const isModalAccepted = localStorage.getItem('modalAccepted');
 
-		// Блокировка прокрутки при открытом меню
-		if (menu.classList.contains('active')) {
-			document.body.style.overflow = 'hidden'
-		} else {
-			document.body.style.overflow = ''
-		}
-	})
+    // Если согласия нет - показываем модалку и блокируем скролл
+    if (!isModalAccepted) {
+        modal.style.display = 'flex'; // Используем flex, чтобы модалка была видна
+        body.classList.add('noscroll');
+    } else {
+        modal.style.display = 'none'; // Скрываем, если уже согласен
+        body.classList.remove('noscroll');
+    }
 
-	// Закрытие меню при клике на ссылку
-	const menuLinks = document.querySelectorAll('.head-button')
-	menuLinks.forEach(link => {
-		link.addEventListener('click', function () {
-			burger.classList.remove('active')
-			menu.classList.remove('active')
-			document.body.style.overflow = ''
-		})
-	})
-})
+    // Обработчик для бургер-меню
+    if (burger && menu) {
+        burger.addEventListener('click', function () {
+            this.classList.toggle('active');
+            menu.classList.toggle('active');
 
-const body = document.body
+            // Блокировка прокрутки при открытом меню
+            if (menu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
 
-document.addEventListener('DOMContentLoaded', function () {
-	body.classList.add('noscroll')
-})
+        // Закрытие меню при клике на ссылку
+        const menuLinks = document.querySelectorAll('.head-button');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                burger.classList.remove('active');
+                menu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    } else {
+        console.error('Бургер или меню не найдены, ты совсем идиот?');
+    }
 
-let modal = document.getElementById('Modal')
-
-function acceptAction() {
-	const modal = document.getElementById('Modal')
-	modal.style.display = 'none' // Скрываем модальное окно
-	body.classList.remove('noscroll') // Возвращаем возможность прокручивания страницы
-}
+    // Функция принятия соглашения
+    window.acceptAction = function () {
+        localStorage.setItem('modalAccepted', 'true'); // Сохраняем в localStorage
+        modal.style.display = 'none';
+        body.classList.remove('noscroll');
+    };
+});
