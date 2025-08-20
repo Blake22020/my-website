@@ -40,11 +40,13 @@
 ```bash
 git clone https://github.com/Blake22020/GBlake.git
 cd GBlake
+```
 Для локальной разработки:
 Просто откройте index.html в браузере
 Для сервера:
-bash
+```bash
 python -m http.server 8000
+```
 Для редактирования:
 Убедитесь, что доступны интернет (для Google Fonts)
 Проверьте наличие папок assets/fonts и assets/img
