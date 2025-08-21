@@ -8,18 +8,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/kjartanhr/JetBrainsMono-Webfont@main/JetBrainsMono/JetBrainsMono.css" rel="stylesheet">
-
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <a class="main-button" href="https://gblake.ru">GBlake</a>
         <div class="head-buttons">
-            <a href="#sec-1" class="head-button">Начало</a>
-            <a href="#" class="head-button">Инфо</a>
-            <a href="#" class="head-button">Модели</a>
-            <a href="#" class="head-button">Контакты</a>
+            <a href="#sec1" class="head-button">Начало</a>
+            <a href="#sec2" class="head-button">Инфо</a>
+            <a href="#sec3" class="head-button">Модели</a>
+            <a href="#sec4" class="head-button">Контакты</a>
         </div>
+        <div class="mobile-menu">
+            <button class="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="menu">
+                <a href="#sec1">Начало</a>
+                <a href="#sec2">Инфо</a>
+                <a href="#sec3">Модели</a>
+                <a href="#sec4">Контакты</a>
+            </nav>
+        </div>
+
     </header>
     <main>
         <section id="sec1" class="sec-1">
@@ -29,12 +43,62 @@
                         <h1>BMW</h1>
                         <p>С удовольствием за рулём</p>
                     </div>
-                    <a href="#" class="button">Дальше</a>
+                    <a href="#sec2" class="button">Дальше</a>
                 </div>
                 <img src="assets/img/car.png" alt="BMW">
             </div>
         </section>
+        <section id="sec2" class="sec-2">
+            <div class="container">
+                <div class="text">
+                    <div class="line"></div>
+                    <p>BMW — это эталон динамики и инженерного совершенства в мире премиальных  автомобилей. Узнаваемый дизайн с фирменной «двойной решеткой» и  спортивный характер каждой модели стали визитной карточкой бренда.</p>
+                </div>
+                <div class="text">
+                    <div class="line"></div>
+                    <p>Истинная философия марки — «Удовольствие за рулем». Оно рождается из  идеальной развесовки, мощных моторов и отточенной управляемости. Салон  предлагает безупречное сочетание роскоши и передовых технологий.</p>
+                </div>
+                <div class="text">
+                    <div class="line"></div>
+                    <p>Сегодня BMW уверенно смотрит в будущее, развивая электромобили под  суббрендом BMW i. Модели вроде iX и i4 доказывают, что фирменные эмоции за рулем прекрасно совмещаются с  технологиями.</p>
+                </div>
+            </div>
+        </section>
+        <section id="sec3" class="sec-3">
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/img/card_1.jpg" alt="">
+                    <div class="text">
+                        <h1>M5</h1>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/card_2.jpg" alt="">
+                    <div class="text">
+                        <h1>M4</h1>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/card_3.jpg" alt="">
+                    <div class="text">
+                        <h1>M8</h1>
+                        <a href="#">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer id="sec4">
+        <h1>Контакты</h1>
+        <div class="buttons">
+            <a href="https://t.me/BLAKE_000" class="button">Telegram</a>
+            <a href="https://github.com/Blake22020" class="button">Github</a>
+            <a href="mailto:mr.blake.hero@mail.ru" class="button">Mail</a>
+        </div>
+        <p>GBlake 2025</p>
+    </footer>
 </body>
 </html>
 

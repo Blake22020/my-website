@@ -15,6 +15,7 @@ body, html{
     font-family: "Inter", sans-serif;
     height: 100%; /* Наследует высоту от html */
     transition: all 0.3s ease-in-out;
+    color:black;
 }
 
 header{
@@ -30,6 +31,10 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+header .mobile-menu{
+    display: none;
 }
 
 
@@ -60,12 +65,12 @@ header .head-button:hover{
 }
 
 main{
-    margin-top: 110px;
+    margin-top: 108px;
 }
 
 .sec-1{
     width: 100vw;
-    height: calc(100vh - 110px);
+    height: 100dvh;
 }
 
 .sec-1 img{
@@ -118,4 +123,365 @@ main{
 .sec-1 .button:hover{
     background: black;
     color: white;
+}
+
+.sec-2 {
+    width: 100vw;
+    height: 100dvh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-2 .container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.sec-2 p{
+    font-size: 36px;
+    margin: 30px 0;
+    font-weight: 300;
+}
+
+.sec-2 .line{
+    height: 100%;
+    width: 10px;
+    background: black;
+    border-radius: 5px;
+    min-height: 300px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sec-2 .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.sec-2 .text:hover .line {
+    transform: translateX(-25px);
+}
+
+
+
+.sec-3{
+    width: 100vw;
+    height: 100dvh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-3 .cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.sec-3 .card{
+    --size: 400px;
+    width: var(--size);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.sec-3 .card {
+    width: 400px; /* Фиксированная ширина */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Учитывает padding и border */
+}
+
+.sec-3 img{
+    width: var(--size);
+}
+
+.sec-3 .card h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    font-family: "JetBrainsMono-Bold";
+    text-align: center;
+}
+
+.sec-3 .card a{
+    text-decoration: none;
+    color: black;
+    font-size: 36px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    border-radius: 35px;
+    width: var(--size);
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    padding: 16px 0;
+}
+
+.card .text{
+    display: flex;
+    width: var(--size);
+    flex-direction: column;
+    gap: 30px;
+}
+ 
+.sec-3 .card a:hover{
+    background: black;
+    color: white;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 75px 0 rgba(0, 0, 0, 0.25);
+}
+
+footer .buttons{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    padding: 15px 25px;
+    border-radius: 35px;
+    box-shadow: 0 0 75px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid white;
+}
+
+footer a:hover{
+    background: white;
+    color: black;
+    box-shadow: 0 0 75px 0 rgba(255, 255, 255, 0.25);
+}
+
+footer p{
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.80)
+}
+
+footer *::selection{
+    background: white;
+    color: black;
+}
+
+@media (max-width: 1550px) {
+    .sec-2 .container{
+        width: 80%;
+    }
+    .sec-3 .cards{
+        gap: 100px;
+    }
+
+    .sec-3 .card{
+        --size: 350px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .sec-3{
+        height: auto;
+        margin: 100px 0;
+    }
+
+}
+
+@media (max-width: 1350px) {
+    .sec-1{
+        height: 50dvh;
+    }
+
+    /* Скрываем изображение */
+    .sec-1 img {
+        display: none;
+    }
+    .sec-1 h1{
+        font-size: 128px;
+    }
+
+    /* Центрируем контент */
+    .sec-1 .container {
+        flex-direction: column; /* Вертикальное выравнивание */
+        justify-content: center; /* Центрирование по высоте */
+        align-items: center; /* Центрирование по ширине */
+        text-align: center;
+    }
+
+    /* Убираем выравнивание слева у текста */
+    .sec-1 .container .text-button {
+        align-items: center; /* Центрируем текст и кнопку */
+        gap: 60px;
+    }
+
+    .sec-1 .container .text{
+        gap: 30px;
+    }
+
+    .sec-1 .container .text-button p{
+        font-size: 36px;
+    }
+}
+
+/* Обновленный стиль бургер-меню */
+@media (max-width: 1150px) {
+
+    .sec-1{
+        margin-bottom: 100px;
+    }
+    .sec-2 .line {
+        height: 100%; /* Уменьшенная высота для маленьких экранов */
+        min-height: 200px;
+        display: none;
+    }
+
+    /* Дополнительно: если текст переносится в колонку */
+    .sec-2 .text {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sec-2 .text p {
+        text-align: center;
+    }
+
+    .sec-2 {
+        height: auto;
+        padding-bottom: 200px;
+    }
+
+    .mobile-menu {
+        display: block !important;
+        position: relative;
+    }
+
+    .head-buttons {
+        display: none !important;
+    }
+
+    /* Кнопка-бургер */
+    .hamburger {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 102;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: transparent;
+        border: none;
+        padding: 2px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .hamburger .bar {
+        width: 100%;
+        height: 4px;
+        background: #222;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    /* Меню */
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: white;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 101;
+        overflow-y: auto;
+    }
+
+    .menu a {
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        padding: 20px 0;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu a:hover {
+        color: #000;
+        transform: translateX(10px);
+    }
+
+    .menu.active {
+        transform: translateY(0);
+    }
+
+
+
+    /* Анимация бургера */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(22px);
+        background: #000;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(-22px);
+        background: #000;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer .buttons{
+        flex-direction: column;
+    }
+
+    .footer .button{
+        margin: 1px 0;
+        width: 100%;
+        font-size: 24px;
+        padding: 16px 0;
+
+    }
 }
