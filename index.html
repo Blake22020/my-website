@@ -11,13 +11,23 @@
 </head>
 <body>
     <header>
-        <h1>GBlake</h1>
+        <h1><a href="https://gblake.ru">GBlake</a></h1>
+        
+        <!-- Бургер-кнопка -->
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <div class="head-buttons">
             <a href="#sec-1" class="head-button">Start</a>
             <a href="#sec-2" class="head-button">Info</a>
-            <a href="#" class="head-button">Choise</a>
-            <a href="#" class="head-button">Contacts</a>
+            <a href="#sec-3" class="head-button">Choise</a>
+            <a href="#sec-4" class="head-button">Contacts</a>
         </div>
+
+        <a href="#sec-4" class="mobile-button">Contacts</a>
     </header>
     <main>
         <section class="sec-1" id="sec-1">
@@ -25,7 +35,7 @@
                 <div class="text">
                     <div class="text-1">
                         <h1 id="typed-text"></h1>
-                        <div class="cursor"></div>
+                        <div class="cursor" id="cursor"></div>
                     </div>
                     <p>Всё о машинах<br>и не только</p>
                 </div>
@@ -45,7 +55,34 @@
                 </div>
             </div>
         </section>
+        <section class="sec-3" id="sec-3">
+            <div class="cards">
+                <div class="card">
+                    <div class="text">
+                        <img src="assets/img/card1.jpeg" alt="">
+                        <h1>Энциклопедия</h1>
+                    </div>
+                        <a href="mini/index.html" class="button">Подробнее</a>
+                </div>
+                <div class="card">
+                    <div class="text">
+                        <img src="assets/img/card2.jpeg" alt="">
+                        <h1>Сравнение</h1>
+                    </div>
+                    <a href="#" class="button">Подробнее</a>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="sec-4" id="sec-4">
+        <h1>Контакты</h1>
+        <div class="buttons">
+            <a href="https://t.me/BLAKE_000" class="button">Telegram</a>
+            <a href="https://github.com/Blake22020" class="button">Github</a>
+            <a href="mailto:mr.blake.hero@mail.ru" class="button">Mail</a>
+        </div>
+        <p>Copyright © 2025 GBlake</p>
+    </footer>
     <script src="script.js">
 
     </script>

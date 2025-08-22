@@ -27,9 +27,9 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.15);
     padding: 14px 24px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +38,19 @@ header {
 header h1 {
     font-size: 48px;
     font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+
+header h1 a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+header h1 a:hover{
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
 }
 
 header .head-buttons {
@@ -58,8 +71,17 @@ header .head-button:hover {
     color: rgba(255, 255, 255, 0.5);
 }
 
-main{
-    margin-top: 85px;
+header .mobile-button {
+    display: none;
+    color: white;
+    font-size: 24px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header .mobile-button:hover {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .sec-1{
@@ -106,6 +128,10 @@ main{
     box-shadow: 0 0 400px 0 rgba(56, 221, 240, 0.45);
 }
 
+.sec-1 .button:active {
+    transform: scale(0.9);
+}
+
 .sec-1 .text {
     display: flex;
     flex-direction: column;
@@ -128,7 +154,15 @@ main{
 .sec-1 .text-1{
     display: flex;
     align-items: center;
+    height: 200px;
 }
+
+.sec-1 h1::first-letter{
+    color:#06BCD4;
+    text-shadow: #06BCD4 0 0 250px;
+}
+
+
 
 .cursor {
     display: inline-block;
@@ -136,7 +170,7 @@ main{
     height: 178px;
     background-color: white;
     margin-left: 5px;
-    animation: blink 1s infinite;
+    animation: blink 1s ease-in-out infinite;
     box-shadow: 0 0 50px rgba(255, 255, 255, 0.25);
 }
 
@@ -182,4 +216,304 @@ main{
 .sec-2 .text:hover {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 50px 0 rgba(56, 221, 240, 0.25);
+}
+
+
+.sec-3 {
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-3 .cards{
+    display: flex;
+    gap: 100px;
+    padding: 0 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-3 .cards .card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 45px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.sec-3 .cards .card img {
+    width: 600px;
+    border-radius: 35px;
+}
+
+.sec-3 .cards .card .text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sec-3 .cards .card .text h1 {
+    font-size: 56px;
+}
+
+.sec-3 .cards .card .button {
+    font-size: 48px;
+    padding: 16px 0;
+    border-radius: 35px;
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(to right, #06BCD4, #38DDF0);
+    color: white;
+    text-decoration: none;
+}
+
+.sec-3 .cards .card .button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px 0 rgba(56, 221, 240, 0.45);
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    padding: 50px 100px;
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 100px;
+}
+
+
+
+footer .buttons {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+footer .button {
+    background: linear-gradient(to right, #06BCD4, #38DDF0);
+    padding: 16px 48px;
+    border-radius: 35px;
+    font-size: 36px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px 0 rgba(56, 221, 240, 0.45);
+}
+
+footer h1{
+    font-size: 64px;
+    font-weight: 700;
+    text-shadow: 0 0 250px rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 2100px) {
+    .sec-2 .container{
+        width: 70%;
+    }
+}
+
+@media (max-width: 2000px) {
+    .sec-2 .container{
+        width: 80%;
+        gap: 50px;
+    }
+
+    .sec-2 .container .text p {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1950px) {
+    .sec-3 .cards .card img{
+        width: 450px;
+    }
+}
+
+@media (max-width: 1718px ) {
+    .sec-2 .container .text p {
+        font-size: 28px;
+    }
+
+    .sec-2 {
+        height: auto;
+        padding: 200px 0 100px 0;
+    }
+}
+
+@media (max-width: 1350px) {
+    header .head-buttons{
+        gap: 100px;
+    }
+}
+
+
+@media (max-width: 1250px) {
+    main {
+        margin-top: 75px;
+    }
+
+    .sec-3, .sec-3 .cards {
+        height: auto;
+    }
+
+    .sec-3{
+        padding: 100px 0;
+    }
+
+    .sec-3 .card img{
+        width: 550px;
+    }
+}
+
+@media (max-width: 1100px) {
+    header, .head-buttons{
+        padding-right: 20px !important;
+    }
+    header .head-buttons{
+        gap: 75px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sec-1 .text-1 {
+        height: 150px;
+    }
+
+    .sec-1 h1{
+        font-size: 130px !important;
+    }
+
+    .sec-1 p {
+        font-size: 36px !important;
+    }
+
+    .sec-1 .button {
+        font-size: 46px;
+        padding: 16px 56px;
+    }
+
+    .sec-1 .container{
+        gap: 50px;
+    }
+
+    .cursor{
+        height: 130px;
+        width: 68px;
+    }
+
+    .sec-2 {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 950px) {
+    .sec-2 .container, .sec-2{
+        padding: 0 !important;
+    }
+
+    .sec-2 .text{
+        margin: 0 !important;
+    }
+
+    .sec-2 .container {
+        width: 90% !important;
+
+    }
+}
+
+@media (max-width: 900px) {
+    .head-buttons {
+        display: none !important;
+    }
+
+    .mobile-button {
+        display: block !important;
+    }
+
+    footer {
+        padding: 50px 25px;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    .sec-2 .container{
+        width: 95%;
+    }
+}
+
+@media (max-width: 575px) {
+    .sec-1 h1{
+        font-size: 100px !important;
+    }
+
+    .sec-1 p {
+        font-size: 28px !important;
+    }
+
+    .sec-1 .button {
+        font-size: 36px;
+    }
+
+    .sec-1 .cursor {
+        height: 100px !important;
+    }
+
+    .sec-1 .text {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .sec-2 .text {
+        padding-left: 20px;
+    }
+
+    .sec-2 .text p{
+        font-size: 24px !important;
+    }
+
+    .sec-3 .card img{
+        width: calc(100vw - 50px) !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .sec-3 .cards .card .text h1 {
+        font-size: 36px;
+    }
+
+    .sec-3 .cards .card .button {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 430px) {
+    .sec-1 .text h1 {
+        font-size: 80px !important;
+    }
+
+    .sec-1 .text p {
+        font-size: 24px !important;
+    }
+
+    .sec-1 .button {
+        font-size: 28px;
+    }
+
+    .sec-1 .cursor {
+        height: 80px !important;
+        width: 50px;
+    }
 }

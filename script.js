@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const typedText = document.getElementById('typed-text');
-    const text = "GBlake";
+    let text = "GBlake";
     let index = 0;
     let pause = 100;
+    const cursor = document.getElementById('cursor');
 
     function typeWriter() {
         if (index <= text.length) {
@@ -12,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     eraseText();
                 }, Math.floor(Math.random() * 3000 + 2000)); // Пауза случайная от 2 до 5 секунд
             } else {
+                cursor.style.background = "#FFFFFF";
+
                 typedText.textContent += text.charAt(index++);
                 setTimeout(typeWriter, pause);
                 
@@ -40,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index > 0) { // Проверяем, остались ли символы для стирания
             typedText.textContent = text.substring(0, index--); // Удаляем последний символ
             setTimeout(eraseText, 50); // Задержка удаления каждого символа
+            cursor.style.background = "#FFFFFF";
+
         } else {
             typedText.textContent = ""; // Очищаем текст, если он полностью удален
             // Все символы стерты, начинаем новый цикл
@@ -47,8 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 typeWriter(); // Начинаем набор текста заново
             }, 1000); // Дополнительная пауза перед новым циклом (можно удалить)
+            cursor.style.background = "#06BCD4";
         }
     }
 
     typeWriter(); // Запускаем процесс впервые
 });
+
