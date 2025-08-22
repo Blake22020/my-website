@@ -339,7 +339,7 @@ footer *::selection{
         flex-direction: column; /* Вертикальное выравнивание */
         justify-content: center; /* Центрирование по высоте */
         align-items: center; /* Центрирование по ширине */
-        text-align: centeаr;
+        text-align: center;
     }
 
     /* Убираем выравнивание слева у текста */
@@ -360,7 +360,7 @@ footer *::selection{
 /* Обновленный стиль бургер-меню */
 @media (max-width: 1150px) {
     header{
-        top: 0;
+        top: 0 !important;
     }
 
     .sec-1{
@@ -383,6 +383,8 @@ footer *::selection{
 
     .sec-2 .text p {
         text-align: center;
+        font-weight: 350;
+        font-size: 36px;
     }
 
     .sec-2 {
@@ -500,5 +502,25 @@ footer *::selection{
 
     footer p {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+    .sec-1 h1{
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .sec-1 .text-button, .sec-1 .text{
+        width: 100%;
+    }
+
+    .sec-1 .button{
+        width: 60%;
+    }
+    
+    .sec-2 .text p{
+        font-size: 24px;
     }
 }

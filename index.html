@@ -1,124 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>GBlake</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<header>
-			<p><a class="h" href="/">GBlake</a></p>
-			<div id="burger" class="burger">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<div class="head-buttons">
-				<a href="#info" class="head-button">Инфо</a>
-				<a href="#cars" class="head-button">Марки</a>
-				<a href="#footer" class="head-button">Контакты</a>
-			</div>
-		</header>
-		<main>
-			<div class="section-1">
-				<div class="main-text">
-					<div class="text">
-						<h1>Автомобили</h1>
-						<p>
-							Большая энциклопедия про самый <br />
-							известный вид транспорта
-						</p>
-					</div>
-					<a href="#cars" class="button">Перейти</a>
-				</div>
-				<img src="assets/img/section-1.jpeg" alt="GBlake" />
-			</div>
-			<div class="section-2" id="info">
-				<img src="assets/img/section-2.png" alt="" />
-				<div class="blocks">
-					<div class="block">
-						<p>
-							Узнайте историю появления первых автомобилей и этапы развития
-							автомобильной промышленности.
-						</p>
-					</div>
-					<div class="block">
-						<p>
-							Откройте для себя разнообразие типов двигателей и особенностей
-							конструкции современных машин.
-						</p>
-					</div>
-					<div class="block">
-						<p>
-							Погрузитесь в мир инноваций и узнайте о последних достижениях в
-							области автомобилестроения.
-						</p>
-					</div>
-					<div class="block">
-						<p>
-							Обнаружьте секреты безопасности и технологии, обеспечивающие
-							комфорт современного вождения.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="section-3" id="cars">
-				<h1>Марки автомобилей</h1>
-				<div class="cards">
-					<div class="card">
-						<img src="assets/img/bmw.jpeg" alt="" />
-						<h1>BMW</h1>
-						<a href="cars/bmw/index.html" class="button">Перейти</a>
-					</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBlake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>GBlake</h1>
+        <div class="head-buttons">
+            <a href="#sec-1" class="head-button">Start</a>
+            <a href="#sec-2" class="head-button">Info</a>
+            <a href="#" class="head-button">Choise</a>
+            <a href="#" class="head-button">Contacts</a>
+        </div>
+    </header>
+    <main>
+        <section class="sec-1" id="sec-1">
+            <div class="container">
+                <div class="text">
+                    <div class="text-1">
+                        <h1 id="typed-text"></h1>
+                        <div class="cursor"></div>
+                    </div>
+                    <p>Всё о машинах<br>и не только</p>
+                </div>
+                <a href="#sec-2" class="button">Подробнее</a>
+            </div>
+        </section>
+        <section class="sec-2" id="sec-2">
+            <div class="container">
+                <div class="text">
+                    <p>На нашем ресурсе собран полный спектр сведений о современных автомобилях самых известных мировых брендов. Изучите технические характеристики, ознакомьтесь с особенностями дизайна салона и кузова, узнайте мнение реальных владельцев и профессиональных экспертов. Вся информация структурирована таким образом, чтобы процесс выбора подходящего транспортного средства стал простым и удобным.</p>
+                </div>
+                <div class="text">
+                    <p>Регулярно пополняемая база данных включает новейшие модели и обновления текущих серий. Здесь представлены автомобили любых классов и типов: от малолитражных городских машин до роскошных премиум-внедорожников и инновационных электрокаров. Удобная навигация позволит вам быстро найти интересующую вас марку и модель.</p>
+                </div>
+                <div class="text">
+                    <p>Чтобы облегчить сравнение разных вариантов, предлагаем воспользоваться специальным инструментом. Это позволит наглядно оценить плюсы и минусы каждой машины, сопоставляя ключевые показатели нескольких моделей одновременно. Таким образом, наши пользователи смогут принять взвешенное решение перед покупкой автомобиля своей мечты</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js">
 
-					<div class="card">
-						<img src="assets/img/mers.jpeg" alt="" />
-						<h1>Mercedes</h1>
-						<a href="404/index.html" class="button">Перейти</a>
-					</div>
-
-					<div class="card">
-						<img src="assets/img/porshe.jpeg" alt="" />
-						<h1>Porshe</h1>
-						<a href="404/index.html" class="button">Перейти</a>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer id="footer">
-			<h1>Контакты</h1>
-			<div class="buttons">
-				<a href="https://t.me/BLAKE_000" class="button"
-					>Telegram<img src="assets/img/icons/telegram.png" alt=""
-				/></a>
-				<a href="https://github.com/Blake22020" class="button"
-					>Github<img src="assets/img/icons/github.png" alt=""
-				/></a>
-			</div>
-			<p>GBlake 2025</p>
-		</footer>
-
-		<div id="Modal" class="modal">
-			<div class="modal-content">
-				<h1>Подтверждение согласия</h1>
-				<p>
-					Продолжая использование нашего сервиса, вы подтверждаете своё согласие
-					с нашей Политикой конфиденциальности и Условиями предоставления услуг.
-				</p>
-				<p>
-					Нажимая кнопку «Принять», вы соглашаетесь с обработкой ваших
-					персональных данных.
-				</p>
-				<button onclick="acceptAction()">Принять</button>
-			</div>
-		</div>
-		<script src="script.js"></script>
-	</body>
+    </script>
+</body>
 </html>
