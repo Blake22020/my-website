@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список машин</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Список машин</h1>
+    <div id="cars"></div>
+
+    <script>
+class Car {
+    constructor(id, brand, model, year, engine_type, displacement, power, torque, transmission, drivetrain, acceleration, top_speed, fuel_consumption, price) {
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.engine_type = engine_type;
+        this.displacement = displacement;
+        this.power = power;
+        this.torque = torque;
+        this.transmission = transmission;
+        this.drivetrain = drivetrain;
+        this.acceleration = acceleration;
+        this.top_speed = top_speed;
+        this.fuel_consumption = fuel_consumption;
+        this.price = price;
+    }
+}
+let cars = [];
+let firstCar;
+
+fetch('/BETA/php/getCar.php')
+    .then(response => response.json())
+    .then(data => {
+        let container = document.getElementById('cars');
+        
+        // Создаём таблицу
+        let index = 0;
+        // Добавляем автомобили в таблицу
+        data.forEach(car => {
+            if (index != 0) { 
+                cars.push(new Car(
+                    car.id, car.brand, car.model, car.year, 
+                    car.engine_type, car.displacement, car.power, 
+                    car.torque, car.transmission, car.drivetrain, 
+                    car.acceleration, car.top_speed, car.fuel_consumption, 
+                    car.price
+                ));
+            }
+            index++;
+        });
+        carsDiv = document.getElementById('cars');
+        carsDiv.innerHTML = createTable();
+
+        
+
+        // Выводим в консоль
+        console.log('Загружены автомобили:');
+        for (let i = 0; i < cars.length; i++) {
+            console.log(cars[i].brand + ' ' + cars[i].model);
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка загрузки:', error);
+    });
+
+    for (let i = 0; i < cars.length; i++) {
+        console.log(cars[i].brand + ' ' + cars[i].model);
+    }
+
+    function createTable() {
+        let table = ``;
+        for (let i = 0; i < cars.length; i++) {
+            table += `
+                <div class="car"><h2>${cars[i].brand}</h2><h3>${cars[i].model}</h3><button id="button${i}" onclick="changeFirstCar[i]" class="button">Подробнее</button></div>
+            `;
+        }
+        return table;
+    }
+
+    function changeFirstCar(index) {
+        firstCar = cars[index];
+        console.log("Первая машина: " + firstCar.brand + " " + firstCar.model)
+    }
+</script>
+</body>
+</html>
