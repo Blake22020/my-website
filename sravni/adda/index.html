@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список машин</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Список машин</h1>
+    <div id="cars"></div>
+
+    <script>
+class Car {
+    constructor(id, brand, model, year, engine_type, displacement, power, torque, transmission, drivetrain, acceleration, top_speed, fuel_consumption, price) {
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.engine_type = engine_type;
+        this.displacement = displacement;
+        this.power = power;
+        this.torque = torque;
+        this.transmission = transmission;
+        this.drivetrain = drivetrain;
+        this.acceleration = acceleration;
+        this.top_speed = top_speed;
+        this.fuel_consumption = fuel_consumption;
+        this.price = price;
+    }
+}
+let cars = [];
+let firstCar;
+let secondCar;
+const title = document.getElementById('title');
+
+fetch('/BETA/php/getCar.php')
+    .then(response => response.json())
+    .then(data => {
+        let container = document.getElementById('cars');
+        
+        // Создаём таблицу
+        let index = 0;
+        // Добавляем автомобили в таблицу
+        data.forEach(car => {
+            if (index != 0) { 
+                cars.push(new Car(
+                    car.id, car.brand, car.model, car.year, 
+                    car.engine_type, car.displacement, car.power, 
+                    car.torque, car.transmission, car.drivetrain, 
+                    car.acceleration, car.top_speed, car.fuel_consumption, 
+                    car.price
+                ));
+            }
+            index++;
+        });
+        let carsDiv = document.getElementById('cars');
+        carsDiv.innerHTML = createTableFirst();
+
+        
+
+        // Выводим в консоль
+        console.log('Загружены автомобили:');
+        for (let i = 0; i < cars.length; i++) {
+            console.log(cars[i].brand + ' ' + cars[i].model);
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка загрузки:', error);
+    });
+
+    for (let i = 0; i < cars.length; i++) {
+        console.log(cars[i].brand + ' ' + cars[i].model);
+    }
+
+    
+
+    function createTableFirst() {
+        title.innerHTML = "Выберите первое авто";
+        let table = ``;
+        for (let i = 0; i < cars.length; i++) {
+            table += `
+                <div class="car"><h2>${cars[i].brand}</h2><h3>${cars[i].model}</h3><button id="button${i}" onclick="changeFirstCar(${i})" class="button">Подробнее</button></div>
+            `;
+        }
+        return table;
+    }
+
+    function secondStep() {
+        let carDiv = document.getElementById('cars');
+        carDiv.innerHTML = createTableSecond();
+        
+    }
+
+    function thirdStep() {
+        let carDiv = document.getElementById('cars');
+        carDiv.innerHTML = createTableThird();
+    }
+
+    function createTableSecond() {
+        title.innerHTML = "Выберите второе авто";
+        let table = ``;
+        for (let i = 0; i < cars.length; i++) {
+            table += `
+                <div class="car"><h2>${cars[i].brand}</h2><h3>${cars[i].model}</h3><button id="button${i}" onclick="changeSecondCar(${i})" class="button">Подробнее</button></div>
+            `;
+        }
+        return table;
+    }
+
+    function createTableThird() {
+    title.innerHTML = "Сравнение " + firstCar.brand + " " + firstCar.model + " и " + secondCar.brand + " " + secondCar.model;
+    
+    let grid = `
+        <div class="comparison-grid">
+            <div class="car-container">
+                <div class="car-header">Первое авто</div>
+                <div class="car-header">Второе авто</div>
+            </div>
+            <div class="car-row"><span>Бренд и модель</span><p>${firstCar.brand} ${firstCar.model}</p><p>${secondCar.brand} ${secondCar.model}</p></div>
+            <div class="car-row"><span>Год выпуска</span><p>${firstCar.year}</p><p>${secondCar.year}</p></div>
+            <div class="car-row"><span>Тип двигателя</span><p>${firstCar.engine_type}</p><p>${secondCar.engine_type}</p></div>
+            <div class="car-row"><span>Объем (л.)</span>${sravni(firstCar.displacement, secondCar.displacement)}</div>
+            <div class="car-row"><span>Мощность (л.с)</span>${sravni(firstCar.power, secondCar.power)}</div>
+            <div class="car-row"><span>Крутящий момент (Нм)</span>${sravni(firstCar.torque, secondCar.torque)}</div>
+            <div class="car-row"><span>Коробка передач</span><p>${firstCar.transmission}</p><p>${secondCar.transmission}</p></div>
+            <div class="car-row"><span>Привод</span><p>${firstCar.drivetrain}</p><p>${secondCar.drivetrain}</p></div>
+            <div class="car-row"><span>Разгон (c.)</span>${sravni2(firstCar.acceleration, secondCar.acceleration)}</div>
+            <div class="car-row"><span>Макс. скорость (км/ч)</span>${sravni(firstCar.top_speed, secondCar.top_speed)}</div>
+            <div class="car-row"><span>Расход топлива (л/100км)</span>${sravni2(firstCar.fuel_consumption, secondCar.fuel_consumption)}</div>
+            <div class="car-row"><span>Цена ($)</span>${sravni2(firstCar.price, secondCar.price)}</div>
+        </div>
+    `;
+
+    return grid;
+}
+
+    function sravni(firstSpan, secondSpan) {
+        if (firstSpan > secondSpan) {
+            return `<p style="color: green;">${firstSpan}</p><p style="color: red;">${secondSpan}</p>`;
+        }
+        if (firstSpan < secondSpan) {
+            return `<p style="color: red;">${firstSpan}</p><p style="color: green;">${secondSpan}</p>`;
+        }
+        return `<p style="color: green;">${firstSpan}</p><p style="color: green;">${secondSpan}</p>`;
+    }
+
+    function sravni2(firstSpan, secondSpan) {
+        if (firstSpan > secondSpan) {
+            return `<p style="color: red;">${firstSpan}</p><p style="color: green;">${secondSpan}</p>`;
+        }
+        return `<p style="color: green;">${firstSpan}</p><p style="color: red;">${secondSpan}</p>`;
+    }
+
+
+    function changeSecondCar(index) {
+        secondCar = cars[index];
+        console.log("Вторая машина: " + secondCar.brand + " " + secondCar.model)
+        console.log("Итоговый выбор: " + firstCar.brand + " " + firstCar.model + " и " + secondCar.brand + " " + secondCar.model)
+        let carDiv = document.getElementById('cars');
+        carDiv.innerHTML = "";
+        thirdStep();
+    }
+
+    function changeFirstCar(index) {
+        firstCar = cars[index];
+        console.log("Первая машина: " + firstCar.brand + " " + firstCar.model)
+        let carDiv = document.getElementById('cars');
+        carDiv.innerHTML = "";
+        secondStep();
+    }
+</script>
+</body>
+</html>
