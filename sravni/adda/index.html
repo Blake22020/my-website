@@ -149,7 +149,10 @@ fetch('/BETA/php/getCar.php')
         if (firstSpan > secondSpan) {
             return `<p style="color: red;">${firstSpan}</p><p style="color: green;">${secondSpan}</p>`;
         }
-        return `<p style="color: green;">${firstSpan}</p><p style="color: red;">${secondSpan}</p>`;
+        if (firstSpan < secondSpan) {
+            return `<p style="color: green;">${firstSpan}</p><p style="color: red;">${secondSpan}</p>`;
+        }
+        return `<p style="color: green;">${firstSpan}</p><p style="color: green;">${secondSpan}</p>`;
     }
 
 
