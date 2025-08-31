@@ -1,3 +1,5 @@
+const { AOS } = require("aos");
+
 document.addEventListener("DOMContentLoaded", function () {
     const typedText = document.getElementById('typed-text');
     let text = "GBlake";

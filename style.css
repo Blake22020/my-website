@@ -33,6 +33,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: toDown 0.5s ease-in-out;
+}
+
+@keyframes toDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 header h1 {

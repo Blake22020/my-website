@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -44,7 +45,7 @@
         </section>
         <section class="sec-2" id="sec-2">
             <div class="container">
-                <div class="text">
+                <div class="text" data-os="fade-up">
                     <p>На нашем ресурсе собран полный спектр сведений о современных автомобилях самых известных мировых брендов. Изучите технические характеристики, ознакомьтесь с особенностями дизайна салона и кузова, узнайте мнение реальных владельцев и профессиональных экспертов. Вся информация структурирована таким образом, чтобы процесс выбора подходящего транспортного средства стал простым и удобным.</p>
                 </div>
                 <div class="text">
@@ -57,9 +58,9 @@
         </section>
         <section class="sec-3" id="sec-3">
             <div class="cards">
-                <div class="card">
+                <div class="card" >
                     <div class="text">
-                        <img src="assets/img/card1.jpeg" alt="">
+                        <img src="assets/img/card1.jpeg" alt="" >
                         <h1>Энциклопедия</h1>
                     </div>
                         <a href="mini/index.html" class="button">Подробнее</a>
@@ -83,8 +84,11 @@
         </div>
         <p>Copyright © 2025 GBlake</p>
     </footer>
-    <script src="script.js">
 
-    </script>
+        <script src="script.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init()
+		</script>
 </body>
 </html>
