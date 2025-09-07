@@ -7,7 +7,7 @@
 }
 
 body, html {
-    height: 100dvw;
+    width: 100dvw;
     overflow-x: hidden;
 
 }
@@ -42,9 +42,6 @@ header .buttons .button {
     font-size: 40px;
 }
 
-main {
-    margin-top: 90px;
-}
 
 .section-1 {
     background: #F9F9F9;
@@ -108,18 +105,22 @@ main {
         transform:translateY(-10px);
         border: 0;
     }
+
+    &:active {
+        transform: scale(0.8);
+    }
 }
 
 .section-1 .container .buttons .button-2 {
     color: #5A62DF;
     text-decoration: none;
-    border: 2px solid #5A62DF;
+    border: 2px solid #4F5287;
     padding: 20px 0;
     font-size: 48px;
     border-radius: 45px;
     font-family: "JetBrains Mono", monospace;
     font-weight: 300;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 380px;
     text-align: center;
 
@@ -127,6 +128,10 @@ main {
         background:#5A62DF;
         color: white;
         transform:translateY(-10px);
+    }
+
+    &:active {
+        transform: scale(0.8);
     }
 }
 
