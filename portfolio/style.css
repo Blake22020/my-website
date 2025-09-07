@@ -19,6 +19,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 25px 50px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
 }
 
 header .buttons {
@@ -36,3 +41,92 @@ header .buttons .button {
     text-decoration: none;
     font-size: 40px;
 }
+
+main {
+    margin-top: 90px;
+}
+
+.section-1 {
+    background: #F9F9F9;
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: left;
+    padding: 0 50px;
+    padding-top: 17%;
+
+}
+.section-1 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.section-1 .container .container-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 55%;
+}
+
+.section-1 .container .container-1 h1 {
+    font-size: 56px;
+    font-weight: 300;
+}
+
+.section-1 .container .container-1 p {
+    font-size: 56px;
+    font-weight: 300;
+}
+
+.section-1 .container .container-1 p span {
+  font-family: "JetBrains Mono", monospace;
+  color: #5A62DF;
+}
+
+.section-1 .container .buttons {
+    display: flex;
+    gap: 40px;
+}
+
+.section-1 .container .buttons .button-1 {
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(135deg, #5A62DF, #4F5287);
+    padding: 20px 0;
+    font-size: 48px;
+    border-radius: 45px;
+    font-weight: 300;
+    font-family: "JetBrains Mono", monospace;
+    transition: all 0.2s ease-in-out;
+    width: 380px;
+    text-align: center;
+
+
+    &:hover {
+        color: white;
+        transform:translateY(-10px);
+        border: 0;
+    }
+}
+
+.section-1 .container .buttons .button-2 {
+    color: #5A62DF;
+    text-decoration: none;
+    border: 2px solid #5A62DF;
+    padding: 20px 0;
+    font-size: 48px;
+    border-radius: 45px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    width: 380px;
+    text-align: center;
+
+    &:hover {
+        background:#5A62DF;
+        color: white;
+        transform:translateY(-10px);
+    }
+}
+
