@@ -9,7 +9,7 @@
 body, html {
     width: 100dvw;
     overflow-x: hidden;
-
+    background: white;
 }
 
 header {
@@ -135,3 +135,94 @@ header .buttons .button {
     }
 }
 
+.section-2 {
+    width: 100dvw;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 100px 50px 50px;
+    text-align: center;
+}
+
+.section-2 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 .container .container-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 76px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 .container .container-1 h1 {
+    font-size: 116px;
+    font-weight: 300;
+}
+
+.section-2 .container .container-1 .grid {
+    display: grid;
+    width: 100%;
+    gap: 100px 125px;
+    grid-template-columns: repeat(3, 500px);
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 .container .container-1 .grid .card {
+    border-radius: 60px;
+    padding: 40px 84px;
+    font-size: 56px;
+    width: 100%; 
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+.section-2 .container .container-1 .grid .main {
+    font-family: "JetBrains Mono", monospace;
+    color: #5A62DF;
+    border: 2px solid #5A62DF;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        background: #5A62DF;
+        color: white;
+    }
+}
+
+.section-2 .container .container-1 .grid .prim {
+    border: 2px solid black;
+    color: black;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        background: black;
+        color: white;
+    }
+}
+
+.section-2 .container #space {
+    width: 68px;
+}
+
+.section-2 .container p{
+    font-size: 68px;
+}
+
+.section-2 .container .mainText {
+    color: #5A62DF;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.section-2 .container .primText {
+    color: black;
+}
