@@ -10,6 +10,7 @@ body, html {
     width: 100dvw;
     overflow-x: hidden;
     background: white;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -40,6 +41,11 @@ header .buttons .button {
     color: black;
     text-decoration: none;
     font-size: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+header .buttons .button:hover {
+    color: #5A62DF;
 }
 
 
@@ -211,18 +217,38 @@ header .buttons .button {
 }
 
 .section-2 .container #space {
-    width: 68px;
+    height: 0px;
 }
 
 .section-2 .container p{
     font-size: 68px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 300;
 }
 
 .section-2 .container .mainText {
     color: #5A62DF;
-    font-family: "JetBrains Mono", monospace;
 }
 
 .section-2 .container .primText {
     color: black;
+}
+
+.section-3 {
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 50px;
+}
+
+.section-3 p{
+    font-size: 48px;
+    width: 70%;
+    line-height: 78px;
+}
+
+.section-3 p span {
+    color: #5A62DF;
 }
