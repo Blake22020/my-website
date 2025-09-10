@@ -252,3 +252,92 @@ header .buttons .button:hover {
 .section-3 p span {
     color: #5A62DF;
 }
+
+.section-4 {
+    width: 100dvw;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 34px 60px;
+    text-align: center;
+    gap: 84px;
+}
+.section-4 h1{
+    font-size: 78px;
+    font-weight: 300;
+}
+
+.section-4 .container {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+}
+
+.section-4 .container .card {
+    background: #F9F9F9;
+    border-radius: 45px;
+    padding: 15px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-4 .container .card img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.section-4 .container .card h2 {
+    font-size: 64px;
+    letter-spacing: 3px;
+}
+.section-4 .container .card a {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(
+        135deg, 
+        #5A62DF, 
+        #4F5287,
+        #5A62DF
+    );
+    background-size: 200% 200%;
+    color: white;
+    text-decoration: none;
+    font-size: 56px;
+    border-radius: 30px;
+    font-family: "JetBrains Mono", monospace;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        animation: gradientFlow 2s ease infinite;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(90, 98, 223, 0.3);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 5px 15px rgba(90, 98, 223, 0.2);
+    }
+
+    &.active {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(90, 98, 223, 0.4);
+    }
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
