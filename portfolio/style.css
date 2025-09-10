@@ -104,12 +104,15 @@ header .buttons .button:hover {
     transition: all 0.2s ease-in-out;
     width: 380px;
     text-align: center;
+    background-size: 200% 200%;
+
 
 
     &:hover {
         color: white;
         transform:translateY(-10px);
         border: 0;
+        animation: background 0.3s ease-in-out infinite;
     }
 
     &:active {
@@ -339,5 +342,39 @@ header .buttons .button:hover {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+footer {
+    background: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding: 22px 29px;
+}
+
+footer h1{
+    font-size: 48px;
+}
+
+footer .buttons {
+    display: flex;
+    gap: 61px;
+}
+
+footer .buttons a{
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    padding: 20px 75px;
+    border-radius: 35px;
+    width: 300px;
+    text-align: center;
+
+    &:hover {
+        background: black;
+        color: white;
     }
 }
