@@ -55,8 +55,8 @@ header .buttons .button:hover {
     width: 100dvw;
     display: flex;
     justify-content: left;
+    align-items: center;
     padding: 0 50px;
-    padding-top: 17%;
 
 }
 .section-1 .container {
@@ -112,7 +112,7 @@ header .buttons .button:hover {
         color: white;
         transform:translateY(-10px);
         border: 0;
-        animation: background 0.3s ease-in-out infinite;
+        animation: gradientFlow 2s ease-in-out infinite;
     }
 
     &:active {
@@ -151,8 +151,9 @@ header .buttons .button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 150px 100px 50px 50px;
+    padding: 150px 50px 100px 50px;
     text-align: center;
+    margin: auto;
 }
 
 .section-2 .container {
@@ -162,6 +163,7 @@ header .buttons .button:hover {
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .section-2 .container .container-1 {
@@ -182,7 +184,7 @@ header .buttons .button:hover {
     display: grid;
     width: 100%;
     gap: 100px 125px;
-    grid-template-columns: repeat(3, 500px);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
 }
@@ -367,7 +369,7 @@ footer .buttons a{
     text-decoration: none;
     color: black;
     transition: all 0.3s ease-in-out;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 20px 75px;
     border-radius: 35px;
     width: 300px;
@@ -376,5 +378,82 @@ footer .buttons a{
     &:hover {
         background: black;
         color: white;
+    }
+}
+
+@media (max-width: 2020px) {
+    .section-1 .container .container-1 {
+        width: 70%;
+    }
+
+    .section-2 .container .container-1 .grid {
+        gap: 50px 70px;
+    }
+
+    .section-2 .container .container-1 .grid .card {
+        padding: 30px 50px;
+        width: auto;
+        font-size: 48px;
+    }
+
+    .section-2 .container p{
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1775px) {
+    .section-2 .container .container-1 .grid {
+        width: 85%;
+    }
+
+    .section-2 .container .container-1 .grid .card {
+        font-size: 38px;
+        padding:  25px 0px;
+        width: auto;
+    }
+
+    .section-3 p{
+        width: 80%;
+    }
+}
+
+@media (max-width: 1630px) {
+    .section-4 .container {
+        gap: 100px;
+    }
+
+    .section-4 .container .card {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .section-2 .container .container-1 .grid {
+        gap: 30px 50px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .section-2 .container .container-1 .grid{
+        width: 100%;
+    }
+
+    .section-2 .container p{
+        font-size: 32px;
+    }
+
+    .section-4 .container .card{
+        width: 300px;
+    }
+
+    .section-4 .container .card a {
+        padding: 10px 0;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .section-1 .container .container-1 {
+        width: 85%;
     }
 }
