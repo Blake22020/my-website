@@ -577,9 +577,7 @@ footer .buttons a{
     footer .buttons a{
         font-size: 28px;
     }
-}
 
-@media (max-width: 900px) {
     .section-1 .container {
         width: 100%;
     }
@@ -590,9 +588,115 @@ footer .buttons a{
     .section-1 .container .buttons {
         flex-direction: column;
         width: 100%;
+        gap: 20px
     }
 
-    .section-1 .container .buttons .button, .section-1 .container .buttons .button {
+    .section-1 .container .buttons .button-1, .section-1 .container .buttons .button-2 {
         width: 100%;
+        box-sizing: border-box;
+    }
+
+    .section-1 .container .container-1 h1, .section-1 .container .container-1 p {
+        font-size: 48px;
+    }
+
+    footer .buttons{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .buttons a {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .section-2 .container .container-1 .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .section-2 .container .container-1 .grid .card {
+        width: 100%;
+    }
+
+    .section-4 .container {
+        flex-direction: column;
+    }
+
+    .section-4 .container .card {
+        width: 450px
+    }
+}
+
+@media (max-width: 850px) {
+    .section-3 {
+        padding: 25px 20px 100px 20px;
+    }
+
+    .section-3 p{
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .section-1 {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-2 .container .container-1 .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .section-4 {
+        padding: 34px 20px;
+    }
+
+    .section-4 .container  {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-4 .container .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .section-2 {
+        padding: 150px 5px 100px 5px;
+    }
+
+    .section-2 .container .container-1 h1{
+        font-size: 68px;
+    }
+}
+
+@media (max-width: 400px) {
+    header .header{
+        padding: 15px 20px;
+    }
+
+    header .menu.active {
+        top: 75px;
+    }
+
+    .section-1 .container .container-1 h1{
+        font-size: 40px;
+    }
+
+    .section-1 .container .container-1 p{
+        font-size: 36px;
+    }
+
+    .section-1 .container .buttons .button-1, .section-1 .container .buttons .button-2 {
+        font-size: 36px;
+    }
+
+    .section-3 p{
+        font-size: 32px;
     }
 }
