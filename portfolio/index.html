@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -46,11 +48,11 @@
         <section id="info" class="section-1">
             <div class="container">
                 <div class="container-1">
-                    <h1>Hello there.</h1>
-                    <p>I'm <span>Blake</span>, a <span>backend developer</span> dedicated to creating secure, maintainable, and high-performance solutions.</p>
+                    <h1 data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">Hello there.</h1>
+                    <p data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">I'm <span>Blake</span>, a <span>backend developer</span> dedicated to creating secure, maintainable, and high-performance solutions.</p>
                 </div>
                 <div class="buttons">
-                    <a href="#skills" class="button-1">More</a>
+                    <a href="#skills" class="button-1" >More</a>
                     <a href="https://github.com/Blake22020" class="button-2">Github</a>
                 </div>
             </div>
@@ -78,7 +80,7 @@
             </div>
         </section>
         <section id="about" class="section-3">
-            <p>I'm <span>13</span> y. o. and currently in 9th grade. I started programming when I was 8. Over the years I've tried different areas like Android, frontend, backend, and game development. I enjoyed exploring all of them, but <span>backend</span> became my main focus.
+            <p data-aos="fade"data-aos-duration="1000">I'm <span>13</span> y. o. and currently in 9th grade. I started programming when I was 8. Over the years I've tried different areas like Android, frontend, backend, and game development. I enjoyed exploring all of them, but <span>backend</span> became my main focus.
             <br>
             <br>
                 My next goal is to become a junior developer, either with <span>Go</span> or with <span>TypeScript</span> and <span>Node.js</span>. I'm still in school, but I spend a lot of time coding and learning new things. I'm not like most people my age - I take programming seriously and treat it as my future profession.</p>
@@ -86,16 +88,17 @@
         <section id="projects" class="section-4">
             <h1>Projects</h1>
             <div class="container">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
                     <img src="img/projectTemplate.jpg">
                     <h2>Name</h2>
                     <a href="#">Go</a>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
                     <img src="img/projectTemplate.jpg">
                     <h2>Name</h2>
                     <a href="#">Go</a>
-                </div>                <div class="card">
+                </div>                
+                <div class="card" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
                     <img src="img/projectTemplate.jpg">
                     <h2>Name</h2>
                     <a href="#">Go</a>
@@ -112,5 +115,9 @@
         </div>
         <p>GBlake 2025</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
 </body>
 </html>

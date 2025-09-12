@@ -134,7 +134,7 @@ header .menu a {
     border-radius: 45px;
     font-weight: 300;
     font-family: "JetBrains Mono", monospace;
-    transition: all 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
     width: 380px;
     text-align: center;
     background-size: 200% 200%;
@@ -143,9 +143,6 @@ header .menu a {
 
     &:hover {
         color: white;
-        transform:translateY(-10px);
-        border: 0;
-        animation: gradientFlow 2s ease-in-out infinite;
     }
 
     &:active {
@@ -167,15 +164,11 @@ header .menu a {
     text-align: center;
 
     &:hover {
-        background:#5A62DF;
+        background-color:#5A62DF;
         color: white;
-        transform:translateY(-10px);
-    }
-
-    &:active {
-        transform: scale(0.8);
     }
 }
+
 
 .section-2 {
     width: 100dvw;
