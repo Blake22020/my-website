@@ -48,12 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     burger.addEventListener('click', () => {
         menu.classList.toggle('active');
-        burger.classList.tooggle('active');
+        burger.classList.toggle('active');
     })
 
     menuButtons.forEach(button => {
         button.addEventListener('click', () => {
             menu.classList.remove('active');
+            burger.classList.remove('active');
         })
     })
 })

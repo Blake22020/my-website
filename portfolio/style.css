@@ -59,10 +59,11 @@ header .burger {
 }
 
 header .menu {
-    transform: translateY(-50dvh);
     background: #F9F9F9;
     transition: all 0.3s ease-in-out;
-    z-index: 3;
+    z-index: -1;
+    position: fixed;
+    top: -50dvh;
     width: 100dvw;
     display: flex;
     flex-direction: column;
@@ -461,6 +462,11 @@ footer .buttons a{
         height: 40px;
         flex-direction: column;
         cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    header .burger .line {
+        transition: all 0.3s ease;
     }
 
     header .burger .line {
@@ -471,7 +477,24 @@ footer .buttons a{
     }
 
     header .menu.active {
-        transform: translateY(0px);
+        top: 95px;
+        z-index: 3;
+    }
+
+    header .burger.active{
+        transform: translateX(10px);
+    }
+
+    header .burger.active .line:nth-child(1) {
+        transform: rotate(45deg) translateY(22px) ;
+    }
+
+    header .burger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    header .burger.active .line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-22px) ;
     }
 }
 
@@ -515,6 +538,11 @@ footer .buttons a{
 }
 
 @media (max-width: 1200px) {
+    .section-3 p {
+        font-size: 36px;
+        line-height: 56px;
+    }
+
     .section-4 .container{
         gap: 50px;
     }
@@ -537,11 +565,6 @@ footer .buttons a{
         font-size: 28px;
     }
 
-    .section-3 p {
-        font-size: 36px;
-        line-height: 56px;
-    }
-
     .section-4 .container .card {
         width: 250px;
         gap: 25px
@@ -553,5 +576,23 @@ footer .buttons a{
 
     footer .buttons a{
         font-size: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .section-1 .container {
+        width: 100%;
+    }
+
+    .section-1 .container .container-1 {
+        width: 100%;
+    }
+    .section-1 .container .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section-1 .container .buttons .button, .section-1 .container .buttons .button {
+        width: 100%;
     }
 }
