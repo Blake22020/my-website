@@ -83,14 +83,15 @@ header .menu a {
 
 .section-1 {
     background: #F9F9F9;
-    height: 100dvh;
+    min-height: 100dvh;
     width: 100dvw;
     display: flex;
     justify-content: left;
     align-items: center;
     padding: 0 50px;
-
+    padding-top: 100px;
 }
+
 .section-1 .container {
     display: flex;
     flex-direction: column;
@@ -538,6 +539,10 @@ footer .buttons a{
 }
 
 @media (max-width: 1200px) {
+    .section-1 {
+        height: auto;
+    }
+
     .section-3 p {
         font-size: 36px;
         line-height: 56px;
@@ -642,6 +647,7 @@ footer .buttons a{
 @media (max-width: 700px) {
     .section-1 {
         padding: 50px 20px;
+        padding-top: 100px;
     }
 }
 
@@ -666,6 +672,11 @@ footer .buttons a{
 }
 
 @media (max-width: 500px) {
+    .section-1 {
+        padding-top: 100px;
+        height: auto;
+    }
+
     .section-2 {
         padding: 150px 5px 100px 5px;
     }
