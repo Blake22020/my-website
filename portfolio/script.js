@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Текст во 2 секции
     let text1 = "I’m actively learning this skill";
     let text2 = "I know the basics of this skill";
 
@@ -36,6 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             text.innerHTML = "";
+        })
+    })
+
+    // Анимация бургера
+    let burger = document.getElementById('burger');
+    let menu = document.getElementById('menu');
+    let menuButtons = document.querySelectorAll('header .menu a');
+
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        burger.classList.tooggle('active');
+    })
+
+    menuButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            menu.classList.remove('active');
         })
     })
 })

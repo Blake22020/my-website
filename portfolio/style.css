@@ -14,17 +14,23 @@ body, html {
 }
 
 header {
-    background: #F9F9F9;
-    display: flex;
     width: 100dvw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+header .header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 50px;
-    position: fixed;
-    top: 0;
+    background: #F9F9F9;
     z-index: 5;
-    left: 0;
-    right: 0;
 }
 
 header .buttons {
@@ -48,6 +54,31 @@ header .buttons .button:hover {
     color: #5A62DF;
 }
 
+header .burger {
+    display: none;
+}
+
+header .menu {
+    transform: translateY(-50dvh);
+    background: #F9F9F9;
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px 50px 50px;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+}
 
 .section-1 {
     background: #F9F9F9;
@@ -417,6 +448,33 @@ footer .buttons a{
     }
 }
 
+
+@media (max-width: 1700px) {
+    header .buttons {
+        display: none;
+    }
+
+    header .burger{
+        display: flex;
+        gap: 8px;
+        aspect-ratio: 30 / 22;
+        height: 40px;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    header .burger .line {
+        background: black;
+        height: 100%;
+        width: 100%;
+        border-radius: 35px;
+    }
+
+    header .menu.active {
+        transform: translateY(0px);
+    }
+}
+
 @media (max-width: 1630px) {
     .section-4 .container {
         gap: 100px;
@@ -434,6 +492,10 @@ footer .buttons a{
 }
 
 @media (max-width: 1350px) {
+    .section-1 .container .container-1 {
+        width: 85%;
+    }
+
     .section-2 .container .container-1 .grid{
         width: 100%;
     }
@@ -453,7 +515,43 @@ footer .buttons a{
 }
 
 @media (max-width: 1200px) {
+    .section-4 .container{
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
     .section-1 .container .container-1 {
-        width: 85%;
+        width: 100%;
+    }
+
+    .section-2 .container .container-1 .grid{
+        width: 90%;
+    }
+
+    .section-2 .container .container-1 .grid {
+        gap: 30px 20px;
+    }
+
+    .section-2 .container .container-1 .grid .card {
+        font-size: 28px;
+    }
+
+    .section-3 p {
+        font-size: 36px;
+        line-height: 56px;
+    }
+
+    .section-4 .container .card {
+        width: 250px;
+        gap: 25px
+    }
+
+    .section-4 .container .card h2 {
+        font-size: 48px;
+    }
+
+    footer .buttons a{
+        font-size: 28px;
     }
 }
