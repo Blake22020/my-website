@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let text2 = "I know the basics of this skill";
 
     let text = document.getElementById('aboutSkill');
-    let cards = document.querySelectorAll('.section-2 .container .container-1 .grid card');
+    let cards = document.querySelectorAll('.section-2 .container .container-1 .grid .card');
     let space = document.getElementById('space')
 
     Array.from(cards).forEach(card => {

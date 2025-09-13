@@ -5,12 +5,29 @@
     <title>Список машин</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <h1 id="title">Список машин</h1>
-    <div id="cars"></div>
-
+    <header>
+        <h1>GBlake</h1>
+        <a onclick="history.back()">Назад</a>
+    </header>
+    <div class="container">
+        <h1 id="title"></h1>
+        <div id="cars"></div>
+    </div>
     <script>
+function toTop() {
+    if (document.documentElement.scrollTop) {
+        document.documentElement.scrollTop = 0;
+    } else if (document.body.scrollTop) {
+        document.body.scrollTop = 0;
+    }
+}
+
 class Car {
     constructor(id, brand, model, year, engine_type, displacement, power, torque, transmission, drivetrain, acceleration, top_speed, fuel_consumption, price) {
         this.id = id;
@@ -76,11 +93,12 @@ fetch('/BETA/php/getCar.php')
     
 
     function createTableFirst() {
+        toTop();
         title.innerHTML = "Выберите первое авто";
         let table = ``;
         for (let i = 0; i < cars.length; i++) {
             table += `
-                <div class="car"><h2>${cars[i].brand}</h2><h3>${cars[i].model}</h3><button id="button${i}" onclick="changeFirstCar(${i})" class="button">Подробнее</button></div>
+                <div class="car"><div class="container-1"><h2>${cars[i].brand}</h2><h3>${cars[i].model}</h3></div><button id="button${i}" onclick="changeFirstCar(${i})" class="button">Подробнее</button></div>
             `;
         }
         return table;
@@ -98,17 +116,19 @@ fetch('/BETA/php/getCar.php')
     }
 
     function createTableSecond() {
+        toTop();
         title.innerHTML = "Выберите второе авто";
         let table = ``;
         for (let i = 0; i < cars.length; i++) {
             table += `
-                <div class="car"><h2>${cars[i].brand}</h2><h3>${cars[i].model}</h3><button id="button${i}" onclick="changeSecondCar(${i})" class="button">Подробнее</button></div>
+                <div class="car"><div class="container-1"><h2>${cars[i].brand}</h2><h3>${cars[i].model}</h3></div><button id="button${i}" onclick="changeSecondCar(${i})" class="button">Подробнее</button></div>
             `;
         }
         return table;
     }
 
     function createTableThird() {
+    toTop();
     title.innerHTML = "Сравнение " + firstCar.brand + " " + firstCar.model + " и " + secondCar.brand + " " + secondCar.model;
     
     let grid = `
@@ -172,6 +192,10 @@ fetch('/BETA/php/getCar.php')
         carDiv.innerHTML = "";
         secondStep();
     }
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 </body>
 </html>

@@ -1,0 +1,217 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body, html {
+    width: 100dvw;
+    height: 100dvh;
+    overflow-x: hidden;
+    color: white;
+    background: #101010;
+    scroll-behavior: smooth;
+}
+
+/* Фиксированная шапка */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.03);
+    z-index: 10;
+    padding: 13px 56px 13px 29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(40px);
+    transition: all 0.3s ease;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+header a {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+
+header a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Основной контейнер */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 80px 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* Адаптивная сетка */
+#cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    width: 100%;
+}
+
+/* Карты автомобилей */
+.car {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    min-height: 300px;
+    transition: all 0.3s ease;
+}
+
+.car:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.car .container-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.car h2 {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.car h3 {
+    font-size: 24px;
+    color: #cccccc;
+}
+
+.car .button {
+    font-size: 18px;
+    font-weight: 500;
+    background: #0ABAB5;
+    border-radius: 25px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    min-width: 160px;
+}
+
+.car .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Сетка сравнения */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.car-header {
+    text-align: center;
+    font-weight: 600;
+    color: #cccccc;
+    padding: 10px;
+}
+
+.car-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.car-row span {
+    flex: 1;
+    min-width: 150px;
+    font-weight: 500;
+    color: #cccccc;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 24px;
+    }
+    
+    #title {
+        font-size: 36px;
+    }
+    
+    .car {
+        min-height: 280px;
+    }
+    
+    .car h2 {
+        font-size: 28px;
+    }
+    
+    .car h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    
+    .container {
+        padding: 60px 20px 0;
+    }
+    
+    #title {
+        font-size: 28px;
+    }
+    
+    .car {
+        min-height: 240px;
+    }
+    
+    .car h2 {
+        font-size: 24px;
+    }
+    
+    .car h3 {
+        font-size: 18px;
+    }
+    
+    .car .button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
