@@ -138,11 +138,11 @@ header .menu a {
     width: 380px;
     text-align: center;
     background-size: 200% 200%;
-
+    transition: all 0.3s ease-in-out;
 
 
     &:hover {
-        color: white;
+        transform: translateY(-10px);
     }
 
     &:active {
