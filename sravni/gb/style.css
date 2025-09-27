@@ -105,6 +105,12 @@ header a:hover {
     flex-grow: 1;
 }
 
+.car-container {
+    display: flex;
+    justify-content: right;
+    gap: 30%;
+}
+
 .car h2 {
     font-size: 32px;
     line-height: 1.2;
@@ -132,8 +138,8 @@ header a:hover {
 
 /* Сетка сравнения */
 .comparison-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     background: rgba(255,255,255,0.03);
     border-radius: 20px;
@@ -153,10 +159,10 @@ header a:hover {
     gap: 20px;
     padding: 10px 0;
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    gap: 30%;
 }
 
 .car-row span {
-    flex: 1;
     min-width: 150px;
     font-weight: 500;
     color: #cccccc;
